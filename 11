@@ -1,12 +1,874 @@
-CUST_NO C32(actual: 15, maximum: 14)]
-CARNO C133 (actual: 19, maximum: 12)
-APPROVALCOMPANYFLAG" (actual: 11, maximum: 10)
-IFSMS (actual: 16, maximum: 10)
-ACTI_CARD_SUCC_FLAG (actual: 7, maximum: 2)
-BDSH_SUCC_TIME (actual: 22, maximum: 20)
-LOWER_SUCC_FLAG (actual: 16, maximum: 2)
-MARITALSTATUS (actual: 999, maximum: 255)
-AREA (actual: 21, maximum: 20) - (actual: 25, maximum: 21) - (actual: 26, maximum: 25)
-OTHERCATEGORY" (actual: 53, maximum: 32)
-YEARSEMPLOYED" (actual: 8, maximum: 4)
-PERIODOFRESIDENT" (actual: 1000, maximum: 255)
+create table o_la_consumer_credit_info(              ,
+ID                            VARCHAR2(32 CHAR)      ,
+CREATE_DATE                   TIMESTAMP(6)           ,
+CREATE_USER                   VARCHAR2(30 CHAR)      ,
+UPDATE_DATE                   TIMESTAMP(6)           ,
+UPDATE_USER                   VARCHAR2(30 CHAR)      ,
+VERSION                       NUMBER(19)             ,
+BANK_CODE                     VARCHAR2(4 CHAR)       ,
+INST_CODE                     VARCHAR2(40 CHAR)      ,
+AGE                           VARCHAR2(255 CHAR)     ,
+ANNUALINCOME                  VARCHAR2(255 CHAR)     ,
+APP_LIMIT                     NUMBER(16,2)           ,
+APP_PERIOD                    NUMBER(10)             ,
+APP_TYPE                      VARCHAR2(255 CHAR)     ,
+BILLADDRESS1                  VARCHAR2(255 CHAR)     ,
+BIRTH                         VARCHAR2(255 CHAR)     ,
+BLACKLIST_FLG                 VARCHAR2(255 CHAR)     ,
+BUSITYPE                      VARCHAR2(255 CHAR)     ,
+BUSINESSID                    VARCHAR2(255 CHAR)     ,
+CATEGORY                      VARCHAR2(255 CHAR)     ,
+CENSUSADD1                    VARCHAR2(255 CHAR)     ,
+CENSUSADD2                    VARCHAR2(255 CHAR)     ,
+CENSUSADD3                    VARCHAR2(255 CHAR)     ,
+CENSUSADD4                    VARCHAR2(255 CHAR)     ,
+COMPANY_NAME                  VARCHAR2(255 CHAR)     ,
+COMPANYADD1                   VARCHAR2(255 CHAR)     ,
+COMPANYADD2                   VARCHAR2(255 CHAR)     ,
+COMPANYADD3                   VARCHAR2(255 CHAR)     ,
+COMPANYADD4                   VARCHAR2(255 CHAR)     ,
+COMPANYPHONE                  VARCHAR2(255 CHAR)     ,
+COMPANYSIZE                   VARCHAR2(255 CHAR)     ,
+COMPANYTYPE                   VARCHAR2(255 CHAR)     ,
+CREDIT_CARD_NO                VARCHAR2(255 CHAR)     ,
+CUST_NO                       VARCHAR2(14 CHAR)      ,
+EDUCATION_DEGREE              VARCHAR2(255 CHAR)     ,
+EMAIL                         VARCHAR2(255 CHAR)     ,
+EMPLYDEPT                     VARCHAR2(255 CHAR)     ,
+EST_ACC_STATUS                VARCHAR2(255 CHAR)     ,
+ESTABLISHMENTDATE             VARCHAR2(255 CHAR)     ,
+FEE_PAYMENT_TYPE              VARCHAR2(255 CHAR)     ,
+FINAL_REASON                  VARCHAR2(255 CHAR)     ,
+HOMEADD1                      VARCHAR2(255 CHAR)     ,
+HOMEADD2                      VARCHAR2(255 CHAR)     ,
+HOMEADD3                      VARCHAR2(255 CHAR)     ,
+HOMEADD4                      VARCHAR2(255 CHAR)     ,
+HOMEPHONE                     VARCHAR2(255 CHAR)     ,
+HOMESITUATION                 VARCHAR2(255 CHAR)     ,
+HOUSEHOLD_REGISTER_FLAG       VARCHAR2(255 CHAR)     ,
+IDCARD                        VARCHAR2(255 CHAR)     ,
+ID_TYPE                       VARCHAR2(255 CHAR)     ,
+INTERIMSTATUS                 VARCHAR2(255 CHAR)     ,
+LINKMAN1MOBILE                VARCHAR2(255 CHAR)     ,
+LINKMAN1NAME                  VARCHAR2(255 CHAR)     ,
+LINKMAN1RELATIONSHIP          VARCHAR2(255 CHAR)     ,
+LOAN_TYPE                     VARCHAR2(255 CHAR)     ,
+MARITALSTATUS                 VARCHAR2(255 CHAR)     ,
+MOBILE                        VARCHAR2(255 CHAR)     ,
+NAME                          VARCHAR2(255 CHAR)     ,
+NICCFLAG                      VARCHAR2(255 CHAR)     ,
+OPINE                         VARCHAR2(1000 CHAR)    ,
+PERIODOFRESIDENT              VARCHAR2(255 CHAR)     ,
+POST2                         VARCHAR2(255 CHAR)     ,
+POSTCODE                      VARCHAR2(255 CHAR)     ,
+PRE_CODE                      VARCHAR2(255 CHAR)     ,
+PRE_OPINION                   VARCHAR2(1000 CHAR)    ,
+PRE_PRIMARYLIMIT              VARCHAR2(255 CHAR)     ,
+PRE_STATUS                    VARCHAR2(255 CHAR)     ,
+PRE_STATUS_USER               VARCHAR2(255 CHAR)     ,
+PRIMARYLIMIT                  VARCHAR2(255 CHAR)     ,
+PRODUCT_NO                    VARCHAR2(4 CHAR)       ,
+PROMOTERSOURCE                VARCHAR2(255 CHAR)     ,
+RANDOM_NO                     VARCHAR2(255 CHAR)     ,
+REGION                        VARCHAR2(255 CHAR)     ,
+REMARK                        VARCHAR2(255 CHAR)     ,
+RET_FLAG                      VARCHAR2(255 CHAR)     ,
+SEX                           VARCHAR2(255 CHAR)     ,
+SHENQINGJIAN_NO               VARCHAR2(255 CHAR)     ,
+SPOUSENAME                    VARCHAR2(255 CHAR)     ,
+SPOUSEPHONE                   VARCHAR2(255 CHAR)     ,
+STATUS                        VARCHAR2(255 CHAR)     ,
+TRANSFER_ACTOR                VARCHAR2(255 CHAR)     ,
+TRANSFER_DATE                 TIMESTAMP(6)           ,
+TRANSFER_MONEY_STATUS         VARCHAR2(255 CHAR)     ,
+WITHHOLDINGACC                VARCHAR2(255 CHAR)     ,
+WITHHOLDINGACC_BANK           VARCHAR2(30 CHAR)      ,
+YR_IN_COMP                    NUMBER(19)             ,
+JOB_TITLE                     VARCHAR2(50)           ,
+CARD_STATE                    VARCHAR2(30)           ,
+ACCOUNT_CREDIT_LIMIT          VARCHAR2(30)           ,
+CARD_DEADINE                  VARCHAR2(30)           ,
+OPEN_ACCOUNT_DATE             VARCHAR2(30)           ,
+INTO_CARD_DEADINE             VARCHAR2(30)           ,
+RECEIVE_CARD_TYPE             VARCHAR2(30)           ,
+CARD_BANK_CODE                VARCHAR2(30)           ,
+STAGING_CODE                  VARCHAR2(30)           ,
+INSTALLMENT_PLAN              VARCHAR2(500)          ,
+RECEIVE_STAGE_NUM             VARCHAR2(30)           ,
+MERCHANT_CODE                 VARCHAR2(30)           ,
+INSTALLMENT_RATE              VARCHAR2(30)           ,
+PROMOTER_NAME                 VARCHAR2(30)           ,
+PROMOTER_CODE                 VARCHAR2(30)           ,
+PROMOTION_AGENCY              VARCHAR2(100)          ,
+ACCOUNT_STATE                 VARCHAR2(30)           ,
+COMPANY_INDUSTRY              VARCHAR2(100)          ,
+PROFESSION                    VARCHAR2(100)          ,
+IDCARD_DEADINE                VARCHAR2(50)           ,
+CURRENCY                      VARCHAR2(50)           ,
+MP_L_REMPPL                   NUMBER(12,2)           ,
+TEMPBEG                       VARCHAR2(10)           ,
+MPREMPPL                      VARCHAR2(20)           ,
+TEMPLIMIT                     VARCHAR2(20)           ,
+ISSDATE                       VARCHAR2(10)           ,
+CALLIMIT                      VARCHAR2(30)           ,
+CREDITLIMIT                   VARCHAR2(30)           ,
+AREA                          VARCHAR2(20)           ,
+QUEUE                         VARCHAR2(20)           ,
+BUSINESS_TYPE                 VARCHAR2(255)          ,
+CUSTOMER_TYPE                 VARCHAR2(10)           ,
+JIGOU_NO                      VARCHAR2(30)           ,
+ENAME                         VARCHAR2(100)          ,
+PCCODE                        VARCHAR2(30)           ,
+NATIONALITY                   VARCHAR2(10)           ,
+NATIONAL                      VARCHAR2(10)           ,
+RESIDENCE                     VARCHAR2(30)           ,
+CERTIFICATESIGNADDR           VARCHAR2(60)           ,
+RESIDENCEADD4                 VARCHAR2(255)          ,
+RESIDENCEADD3                 VARCHAR2(255)          ,
+RESIDENCEADD2                 VARCHAR2(255)          ,
+RESIDENCEADD1                 VARCHAR2(255)          ,
+RENT                          VARCHAR2(12)           ,
+CARNO                         VARCHAR2(10)           ,
+WEBCHATACCOUNT                VARCHAR2(30)           ,
+QQACCOUNT                     VARCHAR2(30)           ,
+IFETB                         VARCHAR2(10)           ,
+CURDD                         VARCHAR2(20)           ,
+FTECODE                       VARCHAR2(50)           ,
+ICCODE                        VARCHAR2(30)           ,
+OCCODE                        VARCHAR2(19)           ,
+RCCODE                        VARCHAR2(10)           ,
+PROFESSIONALTITLE             VARCHAR2(10)           ,
+COMPANYPOSTCODE               VARCHAR2(6)            ,
+YEARSEMPLOYED                 VARCHAR2(4)            ,
+MONTHSEMPLOYED                VARCHAR2(6)            ,
+WORKPERIOD                    VARCHAR2(4)            ,
+SCCODE                        VARCHAR2(10)           ,
+TBCODE                        VARCHAR2(60)           ,
+APPROVALCOMPANYFLAG           VARCHAR2(10)           ,
+LINKMAN1ADD                   VARCHAR2(60)           ,
+LINKMAN2NAME                  VARCHAR2(30)           ,
+LINKMAN2RELATIONSHIP          VARCHAR2(10)           ,
+LINKMAN2MOBILE                VARCHAR2(12)           ,
+PUBLIC_TYPE                   VARCHAR2(10)           ,
+BILLDATE                      VARCHAR2(10)           ,
+BILLTYPE                      VARCHAR2(10)           ,
+PURPOSE                       VARCHAR2(60)           ,
+PURPOSE_DECLARE               VARCHAR2(255)          ,
+TERMINALLY_PAYMENTS           NUMBER(19,2)           ,
+ENTRUSTEDPAYMENT              VARCHAR2(10)           ,
+IFSMS                         VARCHAR2(10)           ,
+PLEDGELIMIT                   VARCHAR2(20)           ,
+LATERISK                      VARCHAR2(255)          ,
+WITHHOLDINGTYPE               VARCHAR2(10)           ,
+OPINE_NORM1                   VARCHAR2(50)           ,
+OPINE_YANZ1                   VARCHAR2(50)           ,
+CARD_MANNER                   VARCHAR2(10)           ,
+APPLYICATIONDATE              VARCHAR2(16)           ,
+BRANCE                        VARCHAR2(4)            ,
+PROMOTIONCHANNELS             VARCHAR2(10)           ,
+OPINE_NORM2                   VARCHAR2(50)           ,
+OPINE_YANZ2                   VARCHAR2(50)           ,
+OPINE_SIMP3                   VARCHAR2(50)           ,
+OPINE_NORM3                   VARCHAR2(50)           ,
+OPINE_SIMP4                   VARCHAR2(50)           ,
+OPINE_NORM4                   VARCHAR2(50)           ,
+OPINE_YANZ4                   VARCHAR2(50)           ,
+REFEREECARDNO                 VARCHAR2(19)           ,
+RECOMMENDMOBILE               VARCHAR2(30)           ,
+YBHWLRELATIONSHIP             VARCHAR2(10)           ,
+OPINE_SIMP5                   VARCHAR2(50)           ,
+OPINE_NORM5                   VARCHAR2(50)           ,
+PHONECHECKREQUIRE             VARCHAR2(20)           ,
+PHONECHECKBACKINFO            VARCHAR2(20)           ,
+TEMPEFFECTIVEDATE             VARCHAR2(10)           ,
+EXPIRYDATE                    VARCHAR2(20)           ,
+BUREAU                        VARCHAR2(10)           ,
+CUSTOMERSEGMENT               VARCHAR2(10)           ,
+CUSTOMERTYPE2                 VARCHAR2(10)           ,
+IFBRILLIANTCUST               VARCHAR2(10)           ,
+PHOTORECOGNITIONCODE          VARCHAR2(10)           ,
+HOMEADDRCHECK                 VARCHAR2(10)           ,
+COMNAME_CHECK                 VARCHAR2(10)           ,
+INFORMATION_CHECK             VARCHAR2(10)           ,
+WORKCHECK                     VARCHAR2(30)           ,
+INCOMECHECK                   VARCHAR2(30)           ,
+HOMEADDCHECK                  VARCHAR2(30)           ,
+CONTRACTCHECK                 VARCHAR2(30)           ,
+ETMINCOME1                    VARCHAR2(60)           ,
+ETMINCOME2                    VARCHAR2(60)           ,
+MANINCOME                     VARCHAR2(60)           ,
+WHITELIST_FLG                 VARCHAR2(10)           ,
+WHITE_LIMIT                   VARCHAR2(30)           ,
+WHITE_REASON                  VARCHAR2(100)          ,
+LARGE_COMPANY_TYPE            VARCHAR2(20)           ,
+MANUAL_APPROVE                VARCHAR2(30)           ,
+IMAGEFLAG                     VARCHAR2(1)            ,
+APPLYFLAG                     VARCHAR2(1)            ,
+ADJUST_FLAG                   VARCHAR2(16)           ,
+INSTALLMENT_FLAG              VARCHAR2(16)           ,
+BACKUP1                       VARCHAR2(255)          ,
+BACKUP2                       VARCHAR2(255)          ,
+BACKUP3                       VARCHAR2(255)          ,
+BACKUP4                       VARCHAR2(255)          ,
+BACKUP5                       VARCHAR2(255)          ,
+BACKUP6                       VARCHAR2(255)          ,
+BACKUP7                       VARCHAR2(255)          ,
+BACKUP8                       VARCHAR2(255)          ,
+BACKUP9                       VARCHAR2(255)          ,
+BACKUP10                      VARCHAR2(255)          ,
+BACKUP11                      VARCHAR2(255)          ,
+BACKUP12                      VARCHAR2(255)          ,
+BACKUP13                      VARCHAR2(255)          ,
+BACKUP14                      VARCHAR2(255)          ,
+BACKUP15                      VARCHAR2(255)          ,
+BACKUP16                      VARCHAR2(255)          ,
+BACKUP17                      VARCHAR2(255)          ,
+BACKUP18                      VARCHAR2(255)          ,
+BACKUP19                      VARCHAR2(255)          ,
+BACKUP20                      VARCHAR2(255)          ,
+BACKUP21                      VARCHAR2(255)          ,
+BACKUP22                      VARCHAR2(255)          ,
+BACKUP23                      VARCHAR2(255)          ,
+BACKUP24                      VARCHAR2(255)          ,
+BACKUP25                      VARCHAR2(255)          ,
+BACKUP26                      VARCHAR2(255)          ,
+BACKUP27                      VARCHAR2(255)          ,
+BACKUP28                      VARCHAR2(255)          ,
+BACKUP29                      VARCHAR2(255)          ,
+BACKUP30                      VARCHAR2(255)          ,
+BACKUP31                      VARCHAR2(255)          ,
+BACKUP32                      VARCHAR2(255)          ,
+BACKUP33                      VARCHAR2(255)          ,
+BACKUP34                      VARCHAR2(255)          ,
+SPOUSECARDTYPE                VARCHAR2(255)          ,
+SPOUSEIDCARD                  VARCHAR2(255)          ,
+SPOUSECOMPANYNAME             VARCHAR2(255)          ,
+SPOUSEYRINCOMP                VARCHAR2(255)          ,
+SPOUSECOMPANYPHONE            VARCHAR2(255)          ,
+SPOUSEPOST1                   VARCHAR2(255)          ,
+PURPOSE_OTHER                 VARCHAR2(60)           ,
+ARCHIVETIME                   VARCHAR2(255)          ,
+ACTI_CARD_SUCC_FLAG           VARCHAR2(2)            ,
+LOSS_CARD_SUCC_FLAG           VARCHAR2(2)            ,
+RETURN_OPINE                  VARCHAR2(255)          ,
+WITHHOLDINGNO                 VARCHAR2(20)           ,
+JOB_STATUS                    VARCHAR2(32)           ,
+WAGES_FORM                    VARCHAR2(32)           ,
+JOB_CITY                      VARCHAR2(32)           ,
+CHANNEL                       VARCHAR2(255)          ,
+IFACCMANAGERCALL              VARCHAR2(2)            ,
+IFAGREEPBOC                   VARCHAR2(2)            ,
+CARBRAND                      VARCHAR2(16)           ,
+STMLMP                        VARCHAR2(20)           ,
+BALLMP                        VARCHAR2(20)           ,
+REASON_CD1                    VARCHAR2(255)          ,
+REASON_CD2                    VARCHAR2(255)          ,
+REASON_CD3                    VARCHAR2(255)          ,
+REASON_CD4                    VARCHAR2(255)          ,
+REASON_CD5                    VARCHAR2(255)          ,
+BAOGUONUM                     VARCHAR2(60)           ,
+TEL_CHECK_FLAG                VARCHAR2(255)          ,
+REA_TEL_CHECK                 VARCHAR2(255)          ,
+BAOGUOSTATUS                  VARCHAR2(10)           ,
+BAOGUOREMARK                  VARCHAR2(255)          ,
+SENDER                        VARCHAR2(20)           ,
+INCOME_SOURCE                 VARCHAR2(100)          ,
+APP_CREDIT_CARD               VARCHAR2(100)          ,
+APP_MORTGAGE                  VARCHAR2(100)          ,
+TDEBT_INCOME                  VARCHAR2(100)          ,
+NDEBT_INCOME                  VARCHAR2(100)          ,
+PERSONAL_CREDIT               VARCHAR2(100)          ,
+NON_CREDIT                    VARCHAR2(100)          ,
+HISTORY_REFUSE_FLAG           VARCHAR2(2)            ,
+MERCHANDISE_ID                VARCHAR2(50)           ,
+AGE_AMT                       VARCHAR2(255 CHAR)     ,
+AGE_DAYS                      VARCHAR2(255 CHAR)     ,
+APPLICATION_TYPE              VARCHAR2(16)           ,
+FINAL_TIME                    TIMESTAMP(6)           ,
+FINAL_USERNAME                VARCHAR2(255)          ,
+AFFILIATED_PERSON_NAME        VARCHAR2(32)           ,
+AFFILIATED_MEMBER_NAME        VARCHAR2(64)           ,
+AFFILIATED_PERSON_POST        VARCHAR2(32)           ,
+MERCHANT_NAME                 VARCHAR2(255)          ,
+MERCHANDISE_NAME              VARCHAR2()255)         ,
+INTEREST_RATE                 VARCHAR2(255)          ,
+MONTHLY_PAYMENT               VARCHAR2(255)          ,
+MAXIMUM                       VARCHAR2(255)          ,
+REPAYMENT_MEANS               VARCHAR2(255)          ,
+ASSURE_MEANS                  VARCHAR2(255)          ,
+LOAN_CONDITIONS               VARCHAR2(255)          ,
+CUSTOMER_TYPES                VARCHAR2(255)          ,
+MONTHLY_INCOME                VARCHAR2(255)          ,
+SPOUSE_MONTHLY_INCOME         VARCHAR2(255)          ,
+FAMILY_MONTHLY_INCOME         VARCHAR2(255)          ,
+SUPPORT_POPULATION            VARCHAR2(255)          ,
+FIXED_CHARGES                 VARCHAR2(255)          ,
+TOTAL_LIABILITIES             VARCHAR2(255)          ,
+AMOUNT_GUARANTEED             VARCHAR2(255)          ,
+STOCK_CREDIT                  VARCHAR2(255)          ,
+MONTHLY_PAYMENT_PERCENTAGE    VARCHAR2(255)          ,
+OTHER_MONTHLY_PAYMENT         VARCHAR2(255)          ,
+TOTAL_MON_PAY_PERCENTAGE      VARCHAR2(255)          ,
+SIGNING_BRANCH                VARCHAR2(255)          ,
+ACCEPT_BRANCH                 VARCHAR2(255)          ,
+IFPOS_BYSTAGES                VARCHAR2(255)          ,
+CREDIT_TYPE                   VARCHAR2(255)          ,
+NODE_TRANSACTOR               VARCHAR2(255)          ,
+ACCEPTED_NODENO               VARCHAR2(255)          ,
+isdoublechoonse               VARCHAR2(1)            ,
+LOAN_PURPOSE2                 VARCHAR2(32)           ,
+mission_id                    VARCHAR2(255)          ,
+urgency                       VARCHAR2(255)          ,
+contract_code                 VARCHAR2(17)           ,
+contract_type                 VARCHAR2(1)            ,
+contract_kind                 VARCHAR2(6)            ,
+start_date                    VARCHAR2(8)            ,
+end_date                      VARCHAR2(8)            ,
+contract_state                VARCHAR2(1)            ,
+payee_name                    VARCHAR2(200)          ,
+account_payee                 VARCHAR2(32)           ,
+payee_bank_name               VARCHAR2(200)          ,
+payee_bank_no                 VARCHAR2(32)           ,
+isbankno                      VARCHAR2(1)            ,
+retrial_Flg                   VARCHAR2(2)            ,
+maxUsableLimit                VARCHAR2(255)          ,
+familyDebt                    VARCHAR2(255)          ,
+jigouname                     VARCHAR2(255)          ,
+bdsh_succ_flag                VARCHAR2(2)            ,
+LOWER_SUCC_FLAG               VARCHAR2(2)            ,
+BDSH_SUCC_TIME                VARCHAR2(20)           ,
+BILL_FENQI_FLAG               VARCHAR2(2)            ,
+CONTACTS                      VARCHAR2(32)           ,
+AVLIMIT                       VARCHAR2(50)           ,
+LOCAL_APPNO                   VARCHAR2(32)           ,
+REPORT_ID                     VARCHAR2(30)           ,
+CAPTCHA                       VARCHAR2(16)           ,
+QC_FLAG                       VARCHAR2(1)            ,
+QC_PASS_FLAG                  VARCHAR2(1)            ,
+CONTRA_NBR                    VARCHAR2(32)           ,
+DUE_BILL_NO                   VARCHAR2(32)           ,
+IDCARDCOPIES                  NUMBER(1)              ,
+LOANCONTRACT                  NUMBER(1)              ,
+CREDITAUTHORIZATION           NUMBER(1)              ,
+OTHERCATEGORY                 NUMBER(1)              ,
+UNRECEIPTEREASON              VARCHAR2(255)          ,
+RESULT                        VARCHAR2(255)          ,
+RESULTREMARK                  VARCHAR2(255)          ,
+STORAGELOCATION               VARCHAR2(255)          ,
+BOXESNUMBER                   VARCHAR2(255)          ,
+LASTDATE                      TIMESTAMP(6)           ,
+ETDESTORY                     TIMESTAMP(6)           ,
+READDATE                      TIMESTAMP(6)           ,
+ETRETURNDATE                  TIMESTAMP(6)           ,
+READDEPARTMENT                VARCHAR2(255)          ,
+ACTUALDUEDATE                 TIMESTAMP(6)           ,
+RECEIPTDATE                   TIMESTAMP(6)           ,
+COMPANY_CATEGORY              VARCHAR2(30)           ,
+COMPANY_CODE                  VARCHAR2(30)           ,
+DIP_CHANNNEL                  VARCHAR2(2)            ,
+FUND_MONTHLY_PAYMENT          NUMBER(16,2)           ,
+P_FUND_MONTHLY_PAYMENT        NUMBER(16,2)           ,
+APS001                        NUMBER(16,2)           ,
+APS002                        NUMBER(16,2)           ,
+APS003                        NUMBER(16,2)           ,
+APS004                        NUMBER(16,2)           ,
+APS005                        NUMBER(16,2)           ,
+APS006                        NUMBER(16,2)           ,
+APS007                        NUMBER(16,2)           ,
+APS008                        NUMBER(16,2)           ,
+APS009                        NUMBER(16,2)           ,
+APS010                        NUMBER(16,2)           ,
+APS011                        NUMBER(16,2)           ,
+APS012                        NUMBER(16,2)           ,
+APS013                        NUMBER(16,2)           ,
+APS014                        NUMBER(16,2)           ,
+APS015                        NUMBER(16,2)           ,
+APS016                        NUMBER(16,2)           ,
+APS017                        NUMBER(16,2)           ,
+APS018                        NUMBER(16,2)           ,
+APS019                        NUMBER(16,2)           ,
+APS020                        NUMBER(16,2)           ,
+APS021                        NUMBER(16,2)           ,
+APS022                        NUMBER(16,2)           ,
+APS023                        NUMBER(16,2)           ,
+APS024                        NUMBER(16,2)           ,
+APS025                        NUMBER(16,2)           ,
+APS026                        NUMBER(16,2)           ,
+APS027                        NUMBER(16,2)           ,
+APS028                        NUMBER(16,2)           ,
+APS029                        NUMBER(16,2)           ,
+APS030                        NUMBER(16,2)           ,
+APS031                        NUMBER(16,2)           ,
+APS032                        NUMBER(16,2)           ,
+APS033                        NUMBER(16,2)           ,
+APS034                        NUMBER(16,2)           ,
+APS035                        NUMBER(16,2)           ,
+APS036                        NUMBER(16,2)           ,
+APS037                        NUMBER(16,2)           ,
+APS038                        NUMBER(16,2)           ,
+APS039                        NUMBER(16,2)           ,
+APS040                        NUMBER(16,2)           ,
+APS041                        VARCHAR2(30)           ,
+APS042                        VARCHAR2(30)           ,
+APS043                        VARCHAR2(30)           ,
+APS044                        VARCHAR2(30)           ,
+APS045                        VARCHAR2(30)           ,
+APS046                        VARCHAR2(30)           ,
+APS047                        VARCHAR2(30)           ,
+APS048                        VARCHAR2(30)           ,
+APS049                        VARCHAR2(30)           ,
+APS050                        VARCHAR2(30)           ,
+APS051                        VARCHAR2(30)           ,
+APS052                        VARCHAR2(30)           ,
+APS053                        VARCHAR2(30)           ,
+APS054                        VARCHAR2(30)           ,
+APS055                        VARCHAR2(30)           ,
+APS056                        VARCHAR2(30)           ,
+APS057                        VARCHAR2(30)           ,
+APS058                        VARCHAR2(30)           ,
+APS059                        VARCHAR2(30)           ,
+APS060                        VARCHAR2(30)           ,
+APS061                        VARCHAR2(30)           ,
+APS062                        VARCHAR2(30)           ,
+APS063                        VARCHAR2(30)           ,
+APS064                        VARCHAR2(30)           ,
+APS065                        VARCHAR2(30)           ,
+APS066                        VARCHAR2(30)
+);
+comment on table o_la_consumer_credit_info is '消费信贷主表';
+comment on column o_la_consumer_credit_info.ID is '逻辑主键';
+comment on column o_la_consumer_credit_info.CREATE_DATE is '创建时间';
+comment on column o_la_consumer_credit_info.CREATE_USER is '创建者';
+comment on column o_la_consumer_credit_info.UPDATE_DATE is '更新时间';
+comment on column o_la_consumer_credit_info.UPDATE_USER is '更新者';
+comment on column o_la_consumer_credit_info.VERSION is '版本';
+comment on column o_la_consumer_credit_info.BANK_CODE is '银行号';
+comment on column o_la_consumer_credit_info.INST_CODE is '机构号';
+comment on column o_la_consumer_credit_info.AGE is '年龄';
+comment on column o_la_consumer_credit_info.ANNUALINCOME is '年收入（万元 税后）';
+comment on column o_la_consumer_credit_info.APP_LIMIT is '申请金额';
+comment on column o_la_consumer_credit_info.APP_PERIOD is '借款期限';
+comment on column o_la_consumer_credit_info.APP_TYPE is '贷款种类';
+comment on column o_la_consumer_credit_info.BILLADDRESS1 is '帐单递送地址';
+comment on column o_la_consumer_credit_info.BIRTH is '出生日期';
+comment on column o_la_consumer_credit_info.BLACKLIST_FLG is '是否命中黑名单';
+comment on column o_la_consumer_credit_info.BUSITYPE is '流程类型';
+comment on column o_la_consumer_credit_info.BUSINESSID is '';
+comment on column o_la_consumer_credit_info.CATEGORY is '';
+comment on column o_la_consumer_credit_info.CENSUSADD1 is '配偶工作地址1';
+comment on column o_la_consumer_credit_info.CENSUSADD2 is '配偶工作地址2';
+comment on column o_la_consumer_credit_info.CENSUSADD3 is '配偶工作地址3';
+comment on column o_la_consumer_credit_info.CENSUSADD4 is '配偶工作地址4';
+comment on column o_la_consumer_credit_info.COMPANY_NAME is '公司名称';
+comment on column o_la_consumer_credit_info.COMPANYADD1 is '单位地址1';
+comment on column o_la_consumer_credit_info.COMPANYADD2 is '单位地址2';
+comment on column o_la_consumer_credit_info.COMPANYADD3 is '单位地址3';
+comment on column o_la_consumer_credit_info.COMPANYADD4 is '单位地址4';
+comment on column o_la_consumer_credit_info.COMPANYPHONE is '单位电话';
+comment on column o_la_consumer_credit_info.COMPANYSIZE is '公司规模';
+comment on column o_la_consumer_credit_info.COMPANYTYPE is '公司性质';
+comment on column o_la_consumer_credit_info.CREDIT_CARD_NO is '卡号';
+comment on column o_la_consumer_credit_info.CUST_NO is '本行客户编号';
+comment on column o_la_consumer_credit_info.EDUCATION_DEGREE is '教育程度';
+comment on column o_la_consumer_credit_info.EMAIL is '电子邮箱';
+comment on column o_la_consumer_credit_info.EMPLYDEPT is '部门';
+comment on column o_la_consumer_credit_info.EST_ACC_STATUS is '建账标识';
+comment on column o_la_consumer_credit_info.ESTABLISHMENTDATE is '建账日期';
+comment on column o_la_consumer_credit_info.FEE_PAYMENT_TYPE is '支付方式';
+comment on column o_la_consumer_credit_info.FINAL_REASON is '完成原因码/建议结论';
+comment on column o_la_consumer_credit_info.HOMEADD1 is '住宅地址1';
+comment on column o_la_consumer_credit_info.HOMEADD2 is '住宅地址2';
+comment on column o_la_consumer_credit_info.HOMEADD3 is '住宅地址3';
+comment on column o_la_consumer_credit_info.HOMEADD4 is '住宅地址4';
+comment on column o_la_consumer_credit_info.HOMEPHONE is '家庭电话';
+comment on column o_la_consumer_credit_info.HOMESITUATION is '住宅类型';
+comment on column o_la_consumer_credit_info.HOUSEHOLD_REGISTER_FLAG is '户籍状况';
+comment on column o_la_consumer_credit_info.IDCARD is '证件号码';
+comment on column o_la_consumer_credit_info.ID_TYPE is '证件类型';
+comment on column o_la_consumer_credit_info.INTERIMSTATUS is '临时状态';
+comment on column o_la_consumer_credit_info.LINKMAN1MOBILE is '手机';
+comment on column o_la_consumer_credit_info.LINKMAN1NAME is '联系人一姓名';
+comment on column o_la_consumer_credit_info.LINKMAN1RELATIONSHIP is '与申请人关系';
+comment on column o_la_consumer_credit_info.LOAN_TYPE is '产品类型';
+comment on column o_la_consumer_credit_info.MARITALSTATUS is '婚姻状况';
+comment on column o_la_consumer_credit_info.MOBILE is '手机号';
+comment on column o_la_consumer_credit_info.NAME is '姓名';
+comment on column o_la_consumer_credit_info.NICCFLAG is '公安征信执行flg';
+comment on column o_la_consumer_credit_info.OPINE is '意见';
+comment on column o_la_consumer_credit_info.PERIODOFRESIDENT is '居住时间';
+comment on column o_la_consumer_credit_info.POST2 is '职位';
+comment on column o_la_consumer_credit_info.POSTCODE is '邮政编码';
+comment on column o_la_consumer_credit_info.PRE_CODE is '前级建议结论';
+comment on column o_la_consumer_credit_info.PRE_OPINION is '前级意见';
+comment on column o_la_consumer_credit_info.PRE_PRIMARYLIMIT is '前级审批额度';
+comment on column o_la_consumer_credit_info.PRE_STATUS is '前级状态';
+comment on column o_la_consumer_credit_info.PRE_STATUS_USER is '申请件上一状态人员';
+comment on column o_la_consumer_credit_info.PRIMARYLIMIT is '审批额度';
+comment on column o_la_consumer_credit_info.PRODUCT_NO is '卡种';
+comment on column o_la_consumer_credit_info.PROMOTERSOURCE is '进件来源代码二';
+comment on column o_la_consumer_credit_info.RANDOM_NO is '随机数';
+comment on column o_la_consumer_credit_info.REGION is '城市代码';
+comment on column o_la_consumer_credit_info.REMARK is '备注';
+comment on column o_la_consumer_credit_info.RET_FLAG is '是否退件';
+comment on column o_la_consumer_credit_info.SEX is '性别';
+comment on column o_la_consumer_credit_info.SHENQINGJIAN_NO is '条码';
+comment on column o_la_consumer_credit_info.SPOUSENAME is '配偶姓名';
+comment on column o_la_consumer_credit_info.SPOUSEPHONE is '配偶联系电话';
+comment on column o_la_consumer_credit_info.STATUS is '状态';
+comment on column o_la_consumer_credit_info.TRANSFER_ACTOR is '放款人';
+comment on column o_la_consumer_credit_info.TRANSFER_DATE is '放款日期';
+comment on column o_la_consumer_credit_info.TRANSFER_MONEY_STATUS is '放款状态';
+comment on column o_la_consumer_credit_info.WITHHOLDINGACC is '转入账号';
+comment on column o_la_consumer_credit_info.WITHHOLDINGACC_BANK is '借款转入银行';
+comment on column o_la_consumer_credit_info.YR_IN_COMP is '工作起始年份';
+comment on column o_la_consumer_credit_info.JOB_TITLE is '职称';
+comment on column o_la_consumer_credit_info.CARD_STATE is '卡片状态';
+comment on column o_la_consumer_credit_info.ACCOUNT_CREDIT_LIMIT is '账户信用额度';
+comment on column o_la_consumer_credit_info.CARD_DEADINE is '卡片有效期';
+comment on column o_la_consumer_credit_info.OPEN_ACCOUNT_DATE is '开户日期';
+comment on column o_la_consumer_credit_info.INTO_CARD_DEADINE is '转入银行卡卡片有效期';
+comment on column o_la_consumer_credit_info.RECEIVE_CARD_TYPE is '收款银行卡号类型';
+comment on column o_la_consumer_credit_info.CARD_BANK_CODE is '银行卡银行行号';
+comment on column o_la_consumer_credit_info.STAGING_CODE is '分期业务代码';
+comment on column o_la_consumer_credit_info.INSTALLMENT_PLAN is '分期计划';
+comment on column o_la_consumer_credit_info.RECEIVE_STAGE_NUM is '收款账户分期期数';
+comment on column o_la_consumer_credit_info.MERCHANT_CODE is '商户编号';
+comment on column o_la_consumer_credit_info.INSTALLMENT_RATE is '分期费率';
+comment on column o_la_consumer_credit_info.PROMOTER_NAME is '推荐人姓名';
+comment on column o_la_consumer_credit_info.PROMOTER_CODE is '推荐人工号';
+comment on column o_la_consumer_credit_info.PROMOTION_AGENCY is '推广人机构';
+comment on column o_la_consumer_credit_info.ACCOUNT_STATE is '账户状态';
+comment on column o_la_consumer_credit_info.COMPANY_INDUSTRY is '行业类别';
+comment on column o_la_consumer_credit_info.PROFESSION is '职业';
+comment on column o_la_consumer_credit_info.IDCARD_DEADINE is '证件有效期';
+comment on column o_la_consumer_credit_info.CURRENCY is '币种';
+comment on column o_la_consumer_credit_info.MP_L_REMPPL is '大额分期未分摊金额';
+comment on column o_la_consumer_credit_info.TEMPBEG is '临时额度生效日期';
+comment on column o_la_consumer_credit_info.MPREMPPL is '分期付款剩余本金总额';
+comment on column o_la_consumer_credit_info.TEMPLIMIT is '临时信用额度';
+comment on column o_la_consumer_credit_info.ISSDATE is '发卡日期';
+comment on column o_la_consumer_credit_info.CALLIMIT is '现金分期额度';
+comment on column o_la_consumer_credit_info.CREDITLIMIT is '信用额度';
+comment on column o_la_consumer_credit_info.AREA is '区域';
+comment on column o_la_consumer_credit_info.QUEUE is '队列';
+comment on column o_la_consumer_credit_info.BUSINESS_TYPE is '申请人业务类型';
+comment on column o_la_consumer_credit_info.CUSTOMER_TYPE is '申请人类型';
+comment on column o_la_consumer_credit_info.JIGOU_NO is '所属机构';
+comment on column o_la_consumer_credit_info.ENAME is '姓名拼音';
+comment on column o_la_consumer_credit_info.PCCODE is '未成年子女个数';
+comment on column o_la_consumer_credit_info.NATIONALITY is '国籍';
+comment on column o_la_consumer_credit_info.NATIONAL is '国籍细分代码';
+comment on column o_la_consumer_credit_info.RESIDENCE is '居住国家';
+comment on column o_la_consumer_credit_info.CERTIFICATESIGNADDR is '证件签发地';
+comment on column o_la_consumer_credit_info.RESIDENCEADD4 is '户籍地址4';
+comment on column o_la_consumer_credit_info.RESIDENCEADD3 is '户籍地址3';
+comment on column o_la_consumer_credit_info.RESIDENCEADD2 is '户籍地址2';
+comment on column o_la_consumer_credit_info.RESIDENCEADD1 is '户籍地址1';
+comment on column o_la_consumer_credit_info.RENT is '月还款金额/月租金 ( 如果住宅类型是按揭/租赁）';
+comment on column o_la_consumer_credit_info.CARNO is '机动车车牌号';
+comment on column o_la_consumer_credit_info.WEBCHATACCOUNT is '微信号';
+comment on column o_la_consumer_credit_info.QQACCOUNT is 'QQ号';
+comment on column o_la_consumer_credit_info.IFETB is '是否为现有客户';
+comment on column o_la_consumer_credit_info.CURDD is '现有借记卡号/帐号';
+comment on column o_la_consumer_credit_info.FTECODE is '申请人曾用名';
+comment on column o_la_consumer_credit_info.ICCODE is '第二国籍';
+comment on column o_la_consumer_credit_info.OCCODE is '港澳地证件号码';
+comment on column o_la_consumer_credit_info.RCCODE is '就业状态';
+comment on column o_la_consumer_credit_info.PROFESSIONALTITLE is '岗位级别';
+comment on column o_la_consumer_credit_info.COMPANYPOSTCODE is '单位地址邮编';
+comment on column o_la_consumer_credit_info.YEARSEMPLOYED is '现单位工龄（年）';
+comment on column o_la_consumer_credit_info.MONTHSEMPLOYED is '现单位工龄（月）';
+comment on column o_la_consumer_credit_info.WORKPERIOD is '总工龄';
+comment on column o_la_consumer_credit_info.SCCODE is '汇丰员工标志';
+comment on column o_la_consumer_credit_info.TBCODE is '汇丰员工号码';
+comment on column o_la_consumer_credit_info.APPROVALCOMPANYFLAG is '汇丰员工级别';
+comment on column o_la_consumer_credit_info.LINKMAN1ADD is '联系人一地址';
+comment on column o_la_consumer_credit_info.LINKMAN2NAME is '联系人二姓名';
+comment on column o_la_consumer_credit_info.LINKMAN2RELATIONSHIP is '与申请人关系';
+comment on column o_la_consumer_credit_info.LINKMAN2MOBILE is '手机';
+comment on column o_la_consumer_credit_info.PUBLIC_TYPE is '联系时间 （工作日，休息日）';
+comment on column o_la_consumer_credit_info.BILLDATE is '帐单日（即还款日）';
+comment on column o_la_consumer_credit_info.BILLTYPE is '帐单递送方式';
+comment on column o_la_consumer_credit_info.PURPOSE is '申请借款用途';
+comment on column o_la_consumer_credit_info.PURPOSE_DECLARE is '借款用途声明';
+comment on column o_la_consumer_credit_info.TERMINALLY_PAYMENTS is '每期需偿款金额';
+comment on column o_la_consumer_credit_info.ENTRUSTEDPAYMENT is '受托支付比例';
+comment on column o_la_consumer_credit_info.IFSMS is '开通短信通知';
+comment on column o_la_consumer_credit_info.PLEDGELIMIT is '营销信息';
+comment on column o_la_consumer_credit_info.LATERISK is '语言选择';
+comment on column o_la_consumer_credit_info.WITHHOLDINGTYPE is '人民币自扣还款类型';
+comment on column o_la_consumer_credit_info.OPINE_NORM1 is '人民币自扣还款卡号/账号';
+comment on column o_la_consumer_credit_info.OPINE_YANZ1 is '人民币自扣还款帐号开户行';
+comment on column o_la_consumer_credit_info.CARD_MANNER is '申请人真实性核实';
+comment on column o_la_consumer_credit_info.APPLYICATIONDATE is '申请表填写日期';
+comment on column o_la_consumer_credit_info.BRANCE is '分支行代码';
+comment on column o_la_consumer_credit_info.PROMOTIONCHANNELS is '进件来源代码一';
+comment on column o_la_consumer_credit_info.OPINE_NORM2 is '进件机构类型';
+comment on column o_la_consumer_credit_info.OPINE_YANZ2 is '进件机构代码';
+comment on column o_la_consumer_credit_info.OPINE_SIMP3 is '进件团办代码一';
+comment on column o_la_consumer_credit_info.OPINE_NORM3 is '进件团办代码二';
+comment on column o_la_consumer_credit_info.OPINE_SIMP4 is '销售人员代码';
+comment on column o_la_consumer_credit_info.OPINE_NORM4 is '复合人员代码一';
+comment on column o_la_consumer_credit_info.OPINE_YANZ4 is '复合人员代码二';
+comment on column o_la_consumer_credit_info.REFEREECARDNO is '推荐人卡号';
+comment on column o_la_consumer_credit_info.RECOMMENDMOBILE is '推荐人手机';
+comment on column o_la_consumer_credit_info.YBHWLRELATIONSHIP is '与本行往来关系';
+comment on column o_la_consumer_credit_info.OPINE_SIMP5 is 'CDD状态';
+comment on column o_la_consumer_credit_info.OPINE_NORM5 is 'KYC状态';
+comment on column o_la_consumer_credit_info.PHONECHECKREQUIRE is '现场核查（亲见亲签）';
+comment on column o_la_consumer_credit_info.PHONECHECKBACKINFO is 'ETB 标识';
+comment on column o_la_consumer_credit_info.TEMPEFFECTIVEDATE is '员工合同生效期';
+comment on column o_la_consumer_credit_info.EXPIRYDATE is '员工合同到期日（如有）';
+comment on column o_la_consumer_credit_info.BUREAU is '风险等级';
+comment on column o_la_consumer_credit_info.CUSTOMERSEGMENT is '敏感行业';
+comment on column o_la_consumer_credit_info.CUSTOMERTYPE2 is '客户分类';
+comment on column o_la_consumer_credit_info.IFBRILLIANTCUST is '卓越理财客户';
+comment on column o_la_consumer_credit_info.PHOTORECOGNITIONCODE is '照片识别码';
+comment on column o_la_consumer_credit_info.HOMEADDRCHECK is '居住地址征信是否一致';
+comment on column o_la_consumer_credit_info.COMNAME_CHECK is '工作单位与征信是否一致';
+comment on column o_la_consumer_credit_info.INFORMATION_CHECK is '其他关键信息与征信是否一致';
+comment on column o_la_consumer_credit_info.WORKCHECK is '工作核实结果';
+comment on column o_la_consumer_credit_info.INCOMECHECK is '收入证明来源';
+comment on column o_la_consumer_credit_info.HOMEADDCHECK is '居住地址核实结果';
+comment on column o_la_consumer_credit_info.CONTRACTCHECK is '工作合同核实结果';
+comment on column o_la_consumer_credit_info.ETMINCOME1 is '估算收入-50%';
+comment on column o_la_consumer_credit_info.ETMINCOME2 is '估算收入-75%';
+comment on column o_la_consumer_credit_info.MANINCOME is '人工核实收入';
+comment on column o_la_consumer_credit_info.WHITELIST_FLG is '是否命中白名单';
+comment on column o_la_consumer_credit_info.WHITE_LIMIT is '白名单额度';
+comment on column o_la_consumer_credit_info.WHITE_REASON is '进入白名单原因';
+comment on column o_la_consumer_credit_info.LARGE_COMPANY_TYPE is '大公司类型';
+comment on column o_la_consumer_credit_info.MANUAL_APPROVE is '人工授信（VIP）';
+comment on column o_la_consumer_credit_info.IMAGEFLAG is '影像标识';
+comment on column o_la_consumer_credit_info.APPLYFLAG is '申请标识';
+comment on column o_la_consumer_credit_info.ADJUST_FLAG is '调额成功标识';
+comment on column o_la_consumer_credit_info.INSTALLMENT_FLAG is '分期成功标识';
+comment on column o_la_consumer_credit_info.BACKUP1 is '个性化信息1';
+comment on column o_la_consumer_credit_info.BACKUP2 is '个性化信息2';
+comment on column o_la_consumer_credit_info.BACKUP3 is '个性化信息3';
+comment on column o_la_consumer_credit_info.BACKUP4 is '个性化信息4';
+comment on column o_la_consumer_credit_info.BACKUP5 is '个性化信息5';
+comment on column o_la_consumer_credit_info.BACKUP6 is '个性化信息6';
+comment on column o_la_consumer_credit_info.BACKUP7 is '个性化信息7';
+comment on column o_la_consumer_credit_info.BACKUP8 is '个性化信息8';
+comment on column o_la_consumer_credit_info.BACKUP9 is '个性化信息9';
+comment on column o_la_consumer_credit_info.BACKUP10 is '个性化信息10';
+comment on column o_la_consumer_credit_info.BACKUP11 is '个性化信息11';
+comment on column o_la_consumer_credit_info.BACKUP12 is '个性化信息12';
+comment on column o_la_consumer_credit_info.BACKUP13 is '个性化信息13';
+comment on column o_la_consumer_credit_info.BACKUP14 is '个性化信息14';
+comment on column o_la_consumer_credit_info.BACKUP15 is '个性化信息15';
+comment on column o_la_consumer_credit_info.BACKUP16 is '个性化信息16';
+comment on column o_la_consumer_credit_info.BACKUP17 is '个性化信息17';
+comment on column o_la_consumer_credit_info.BACKUP18 is '个性化信息18';
+comment on column o_la_consumer_credit_info.BACKUP19 is '个性化信息19';
+comment on column o_la_consumer_credit_info.BACKUP20 is '个性化信息20';
+comment on column o_la_consumer_credit_info.BACKUP21 is '个性化信息 21';
+comment on column o_la_consumer_credit_info.BACKUP22 is '个性化信息 22';
+comment on column o_la_consumer_credit_info.BACKUP23 is '个性化信息 23';
+comment on column o_la_consumer_credit_info.BACKUP24 is '个性化信息 24';
+comment on column o_la_consumer_credit_info.BACKUP25 is '个性化信息 25';
+comment on column o_la_consumer_credit_info.BACKUP26 is '个性化信息 26';
+comment on column o_la_consumer_credit_info.BACKUP27 is '个性化信息 27';
+comment on column o_la_consumer_credit_info.BACKUP28 is '个性化信息 28';
+comment on column o_la_consumer_credit_info.BACKUP29 is '个性化信息 29';
+comment on column o_la_consumer_credit_info.BACKUP30 is '个性化信息 30';
+comment on column o_la_consumer_credit_info.BACKUP31 is '个性化信息 31';
+comment on column o_la_consumer_credit_info.BACKUP32 is '个性化信息 32';
+comment on column o_la_consumer_credit_info.BACKUP33 is '个性化信息 33';
+comment on column o_la_consumer_credit_info.BACKUP34 is '个性化信息 34';
+comment on column o_la_consumer_credit_info.SPOUSECARDTYPE is '配偶证件类型';
+comment on column o_la_consumer_credit_info.SPOUSEIDCARD is '配偶证件号码';
+comment on column o_la_consumer_credit_info.SPOUSECOMPANYNAME is '配偶工作单位';
+comment on column o_la_consumer_credit_info.SPOUSEYRINCOMP is '配偶工作起始年份';
+comment on column o_la_consumer_credit_info.SPOUSECOMPANYPHONE is '配偶单位电话';
+comment on column o_la_consumer_credit_info.SPOUSEPOST1 is '配偶职务';
+comment on column o_la_consumer_credit_info.PURPOSE_OTHER is '申请借款用途-其他';
+comment on column o_la_consumer_credit_info.ARCHIVETIME is '关联方声明';
+comment on column o_la_consumer_credit_info.ACTI_CARD_SUCC_FLAG is '卡激活成功标识';
+comment on column o_la_consumer_credit_info.LOSS_CARD_SUCC_FLAG is '卡挂失成功标识';
+comment on column o_la_consumer_credit_info.RETURN_OPINE is '退回意见';
+comment on column o_la_consumer_credit_info.WITHHOLDINGNO is '人民币自扣还款帐号';
+comment on column o_la_consumer_credit_info.JOB_STATUS is '职业状况';
+comment on column o_la_consumer_credit_info.WAGES_FORM is '工资发放形式';
+comment on column o_la_consumer_credit_info.JOB_CITY is '就业城市';
+comment on column o_la_consumer_credit_info.CHANNEL is '你从何渠道获知我行消费贷款';
+comment on column o_la_consumer_credit_info.IFACCMANAGERCALL is '是否愿意客户经理联系';
+comment on column o_la_consumer_credit_info.IFAGREEPBOC is '是否同意银行查询征信记录';
+comment on column o_la_consumer_credit_info.CARBRAND is '机动车车品牌';
+comment on column o_la_consumer_credit_info.STMLMP is '上期大额分期余额';
+comment on column o_la_consumer_credit_info.BALLMP is '本期大额分期余额';
+comment on column o_la_consumer_credit_info.REASON_CD1 is '补件原因一';
+comment on column o_la_consumer_credit_info.REASON_CD2 is '补件原因二';
+comment on column o_la_consumer_credit_info.REASON_CD3 is '补件原因三';
+comment on column o_la_consumer_credit_info.REASON_CD4 is '补件原因四';
+comment on column o_la_consumer_credit_info.REASON_CD5 is '补件原因五';
+comment on column o_la_consumer_credit_info.BAOGUONUM is '包裹号';
+comment on column o_la_consumer_credit_info.TEL_CHECK_FLAG is '是否免电核';
+comment on column o_la_consumer_credit_info.REA_TEL_CHECK is '免电核原因';
+comment on column o_la_consumer_credit_info.BAOGUOSTATUS is '是否循环担保/包裹状态';
+comment on column o_la_consumer_credit_info.BAOGUOREMARK is '包裹备注';
+comment on column o_la_consumer_credit_info.SENDER is '寄送人';
+comment on column o_la_consumer_credit_info.INCOME_SOURCE is '收入核实结果';
+comment on column o_la_consumer_credit_info.APP_CREDIT_CARD is '在途信用卡申请';
+comment on column o_la_consumer_credit_info.APP_MORTGAGE is '在途楼宇按揭申请';
+comment on column o_la_consumer_credit_info.TDEBT_INCOME is '负债收入比(总额)';
+comment on column o_la_consumer_credit_info.NDEBT_INCOME is '负载收入比（无抵押信贷）';
+comment on column o_la_consumer_credit_info.PERSONAL_CREDIT is '个人信贷总值(含此次贷款)';
+comment on column o_la_consumer_credit_info.NON_CREDIT is '无抵押信贷总值(含此次贷款)';
+comment on column o_la_consumer_credit_info.HISTORY_REFUSE_FLAG is '是否历史拒绝';
+comment on column o_la_consumer_credit_info.MERCHANDISE_ID is '商品编号';
+comment on column o_la_consumer_credit_info.AGE_AMT is '逾期金额';
+comment on column o_la_consumer_credit_info.AGE_DAYS is '逾期期数';
+comment on column o_la_consumer_credit_info.APPLICATION_TYPE is '申请类型';
+comment on column o_la_consumer_credit_info.FINAL_TIME is '终审时间';
+comment on column o_la_consumer_credit_info.FINAL_USERNAME is '审批结束操作员';
+comment on column o_la_consumer_credit_info.AFFILIATED_PERSON_NAME is '关联自然人姓名';
+comment on column o_la_consumer_credit_info.AFFILIATED_MEMBER_NAME is '不属于商业银行性质的汇丰集团成员名称';
+comment on column o_la_consumer_credit_info.AFFILIATED_PERSON_POST is '关联人职位';
+comment on column o_la_consumer_credit_info.MERCHANT_NAME is '商户名称';
+comment on column o_la_consumer_credit_info.MERCHANDISE_NAME is '商品名称';
+comment on column o_la_consumer_credit_info.INTEREST_RATE is '利率（活动代码）';
+comment on column o_la_consumer_credit_info.MONTHLY_PAYMENT is '月供';
+comment on column o_la_consumer_credit_info.MAXIMUM is '极值';
+comment on column o_la_consumer_credit_info.REPAYMENT_MEANS is '还款方式';
+comment on column o_la_consumer_credit_info.ASSURE_MEANS is '担保方式';
+comment on column o_la_consumer_credit_info.LOAN_CONDITIONS is '贷款条件设置';
+comment on column o_la_consumer_credit_info.CUSTOMER_TYPES is '客户种类';
+comment on column o_la_consumer_credit_info.MONTHLY_INCOME is '个人月均收入';
+comment on column o_la_consumer_credit_info.SPOUSE_MONTHLY_INCOME is '配偶月均收入';
+comment on column o_la_consumer_credit_info.FAMILY_MONTHLY_INCOME is '家庭月均收入';
+comment on column o_la_consumer_credit_info.SUPPORT_POPULATION is '供养人口';
+comment on column o_la_consumer_credit_info.FIXED_CHARGES is '每月家庭固定支出';
+comment on column o_la_consumer_credit_info.TOTAL_LIABILITIES is '个人当前负债总额';
+comment on column o_la_consumer_credit_info.AMOUNT_GUARANTEED is '个人当前对外担保总额';
+comment on column o_la_consumer_credit_info.STOCK_CREDIT is '我行存量授信';
+comment on column o_la_consumer_credit_info.MONTHLY_PAYMENT_PERCENTAGE is '本笔月供额占收入百分比';
+comment on column o_la_consumer_credit_info.OTHER_MONTHLY_PAYMENT is '存量其他借款月供款额';
+comment on column o_la_consumer_credit_info.TOTAL_MON_PAY_PERCENTAGE is '合计月供额占收入百分比';
+comment on column o_la_consumer_credit_info.SIGNING_BRANCH is '签约分行';
+comment on column o_la_consumer_credit_info.ACCEPT_BRANCH is '受理分行';
+comment on column o_la_consumer_credit_info.IFPOS_BYSTAGES is '是否分期pos刷卡 ';
+comment on column o_la_consumer_credit_info.CREDIT_TYPE is '授信类型';
+comment on column o_la_consumer_credit_info.NODE_TRANSACTOR is '网点经办人';
+comment on column o_la_consumer_credit_info.ACCEPTED_NODENO is '受理网点号';
+comment on column o_la_consumer_credit_info.isdoublechoonse is '对方关联项选择';
+comment on column o_la_consumer_credit_info.LOAN_PURPOSE2 is '贷款用途2';
+comment on column o_la_consumer_credit_info.mission_id  is '任务ID';
+comment on column o_la_consumer_credit_info.urgency is '紧急程度';
+comment on column o_la_consumer_credit_info.contract_code is '合同编号';
+comment on column o_la_consumer_credit_info.contract_type is '合同类型';
+comment on column o_la_consumer_credit_info.contract_kind is '合同种类';
+comment on column o_la_consumer_credit_info.start_date is '签订日期';
+comment on column o_la_consumer_credit_info.end_date is '到期日期';
+comment on column o_la_consumer_credit_info.contract_state is '合同状态';
+comment on column o_la_consumer_credit_info.payee_name is '收款人名称';
+comment on column o_la_consumer_credit_info.account_payee is '收款人账户';
+comment on column o_la_consumer_credit_info.payee_bank_name is '收款人开户行名称';
+comment on column o_la_consumer_credit_info.payee_bank_no is '收款人开户行编号';
+comment on column o_la_consumer_credit_info.isbankno is '是否本行账号';
+comment on column o_la_consumer_credit_info.retrial_Flg is '重审标识';
+comment on column o_la_consumer_credit_info.maxUsableLimit is '最大可用额度(元)';
+comment on column o_la_consumer_credit_info.familyDebt is '家庭共债(DTI-房贷月供贷)';
+comment on column o_la_consumer_credit_info.jigouname is '机构名称';
+comment on column o_la_consumer_credit_info.bdsh_succ_flag is '绑定商户成功标识';
+comment on column o_la_consumer_credit_info.LOWER_SUCC_FLAG is '';
+comment on column o_la_consumer_credit_info.BDSH_SUCC_TIME is '';
+comment on column o_la_consumer_credit_info.BILL_FENQI_FLAG is '';
+comment on column o_la_consumer_credit_info.CONTACTS is '联系方式';
+comment on column o_la_consumer_credit_info.AVLIMIT is '可用额度';
+comment on column o_la_consumer_credit_info.LOCAL_APPNO is '贷款用途流程关联申请件';
+comment on column o_la_consumer_credit_info.REPORT_ID is '报告编号';
+comment on column o_la_consumer_credit_info.CAPTCHA is '验证码';
+comment on column o_la_consumer_credit_info.QC_FLAG is '是否质检标识';
+comment on column o_la_consumer_credit_info.QC_PASS_FLAG is '质检是否通过标识';
+comment on column o_la_consumer_credit_info.CONTRA_NBR is '合同编号';
+comment on column o_la_consumer_credit_info.DUE_BILL_NO is '借据号';
+comment on column o_la_consumer_credit_info.IDCARDCOPIES is '身份证复印件';
+comment on column o_la_consumer_credit_info.LOANCONTRACT is '领用合约（贷款合同）';
+comment on column o_la_consumer_credit_info.CREDITAUTHORIZATION is '征信授权协议';
+comment on column o_la_consumer_credit_info.OTHERCATEGORY is '其它类';
+comment on column o_la_consumer_credit_info.UNRECEIPTEREASON is '未签收原因';
+comment on column o_la_consumer_credit_info.RESULT is '申请结果';
+comment on column o_la_consumer_credit_info.RESULTREMARK is '抽检结果备注';
+comment on column o_la_consumer_credit_info.STORAGELOCATION is '储存位置';
+comment on column o_la_consumer_credit_info.BOXESNUMBER is '归档箱编号';
+comment on column o_la_consumer_credit_info.LASTDATE is '取走归档日期';
+comment on column o_la_consumer_credit_info.ETDESTORY is '预计销毁时间';
+comment on column o_la_consumer_credit_info.READDATE is '调阅日期';
+comment on column o_la_consumer_credit_info.ETRETURNDATE is '预计归还日期';
+comment on column o_la_consumer_credit_info.READDEPARTMENT is '调阅部门';
+comment on column o_la_consumer_credit_info.ACTUALDUEDATE is '实际归还日期';
+comment on column o_la_consumer_credit_info.RECEIPTDATE is '签收日期';
+comment on column o_la_consumer_credit_info.COMPANY_CATEGORY is '公司类别';
+comment on column o_la_consumer_credit_info.COMPANY_CODE is '公司代码';
+comment on column o_la_consumer_credit_info.DIP_CHANNNEL is '预申请进件标识';
+comment on column o_la_consumer_credit_info.FUND_MONTHLY_PAYMENT is '公积金月缴额';
+comment on column o_la_consumer_credit_info.P_FUND_MONTHLY_PAYMENT is '人工核实公积金月缴额';
+comment on column o_la_consumer_credit_info.APS001 is '数值型预留1';
+comment on column o_la_consumer_credit_info.APS002 is '数值型预留2';
+comment on column o_la_consumer_credit_info.APS003 is '数值型预留3';
+comment on column o_la_consumer_credit_info.APS004 is '数值型预留4';
+comment on column o_la_consumer_credit_info.APS005 is '数值型预留5';
+comment on column o_la_consumer_credit_info.APS006 is '数值型预留6';
+comment on column o_la_consumer_credit_info.APS007 is '数值型预留7';
+comment on column o_la_consumer_credit_info.APS008 is '数值型预留8';
+comment on column o_la_consumer_credit_info.APS009 is '数值型预留9';
+comment on column o_la_consumer_credit_info.APS010 is '数值型预留10';
+comment on column o_la_consumer_credit_info.APS011 is '数值型预留11';
+comment on column o_la_consumer_credit_info.APS012 is '数值型预留12';
+comment on column o_la_consumer_credit_info.APS013 is '数值型预留13';
+comment on column o_la_consumer_credit_info.APS014 is '数值型预留14';
+comment on column o_la_consumer_credit_info.APS015 is '数值型预留15';
+comment on column o_la_consumer_credit_info.APS016 is '数值型预留16';
+comment on column o_la_consumer_credit_info.APS017 is '数值型预留17';
+comment on column o_la_consumer_credit_info.APS018 is '数值型预留18';
+comment on column o_la_consumer_credit_info.APS019 is '数值型预留19';
+comment on column o_la_consumer_credit_info.APS020 is '数值型预留20';
+comment on column o_la_consumer_credit_info.APS021 is '数值型预留21';
+comment on column o_la_consumer_credit_info.APS022 is '数值型预留22';
+comment on column o_la_consumer_credit_info.APS023 is '数值型预留23';
+comment on column o_la_consumer_credit_info.APS024 is '数值型预留24';
+comment on column o_la_consumer_credit_info.APS025 is '数值型预留25';
+comment on column o_la_consumer_credit_info.APS026 is '数值型预留26';
+comment on column o_la_consumer_credit_info.APS027 is '数值型预留27';
+comment on column o_la_consumer_credit_info.APS028 is '数值型预留28';
+comment on column o_la_consumer_credit_info.APS029 is '数值型预留29';
+comment on column o_la_consumer_credit_info.APS030 is '数值型预留30';
+comment on column o_la_consumer_credit_info.APS031 is '数值型预留31';
+comment on column o_la_consumer_credit_info.APS032 is '数值型预留32';
+comment on column o_la_consumer_credit_info.APS033 is '数值型预留33';
+comment on column o_la_consumer_credit_info.APS034 is '数值型预留34';
+comment on column o_la_consumer_credit_info.APS035 is '数值型预留35';
+comment on column o_la_consumer_credit_info.APS036 is '数值型预留36';
+comment on column o_la_consumer_credit_info.APS037 is '数值型预留37';
+comment on column o_la_consumer_credit_info.APS038 is '数值型预留38';
+comment on column o_la_consumer_credit_info.APS039 is '数值型预留39';
+comment on column o_la_consumer_credit_info.APS040 is '数值型预留40';
+comment on column o_la_consumer_credit_info.APS041 is '字符型预留1';
+comment on column o_la_consumer_credit_info.APS042 is '字符型预留2';
+comment on column o_la_consumer_credit_info.APS043 is '字符型预留3';
+comment on column o_la_consumer_credit_info.APS044 is '字符型预留4';
+comment on column o_la_consumer_credit_info.APS045 is '字符型预留5';
+comment on column o_la_consumer_credit_info.APS046 is '字符型预留6';
+comment on column o_la_consumer_credit_info.APS047 is '字符型预留7';
+comment on column o_la_consumer_credit_info.APS048 is '字符型预留8';
+comment on column o_la_consumer_credit_info.APS049 is '字符型预留9';
+comment on column o_la_consumer_credit_info.APS050 is '字符型预留10';
+comment on column o_la_consumer_credit_info.APS051 is '字符型预留11';
+comment on column o_la_consumer_credit_info.APS052 is '字符型预留12';
+comment on column o_la_consumer_credit_info.APS053 is '字符型预留13';
+comment on column o_la_consumer_credit_info.APS054 is '字符型预留14';
+comment on column o_la_consumer_credit_info.APS055 is '字符型预留15';
+comment on column o_la_consumer_credit_info.APS056 is '字符型预留16';
+comment on column o_la_consumer_credit_info.APS057 is '字符型预留17';
+comment on column o_la_consumer_credit_info.APS058 is '字符型预留18';
+comment on column o_la_consumer_credit_info.APS059 is '字符型预留19';
+comment on column o_la_consumer_credit_info.APS060 is '字符型预留20';
+comment on column o_la_consumer_credit_info.APS061 is '字符型预留21';
+comment on column o_la_consumer_credit_info.APS062 is '字符型预留22';
+comment on column o_la_consumer_credit_info.APS063 is '字符型预留23';
+comment on column o_la_consumer_credit_info.APS064 is '字符型预留24';
+comment on column o_la_consumer_credit_info.APS065 is '字符型预留25';
+comment on column o_la_consumer_credit_info.APS066 is '字符型预留26';
+
