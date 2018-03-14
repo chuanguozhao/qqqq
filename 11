@@ -1,170 +1,45 @@
---O_GXOIETWP
-create table O_GXOIETWP (
-       GFJ3A      number(2),
-       GFJMA      varchar2(9),    
-       GFO5A      number(3),
-       GFZRMA     number(5),
-       GFZRNA     varchar2(3),    
-       GFX2AA     number(2),
-       GFX0YA     number(3),
-       GFZROA     number(7),
-       GFZRPA     varchar2(9),    
-       GFX12A     number(5),
-       GFX0CA     varchar2(21),   
-       GFWS3A     number(2),
-       GFPQA      number(13),
-       GFPRA      number(13),
-       GFPSA      number(13),
-       GFPTA      number(13),
-       GFX13A     number(7),
-       GFX0NA     number(7),
-       GFPUA      number(2),
-       GFPVA      number(13),
-       GFPWA      number(2),
-       GFPXA      number(13),
-       GFX15A     varchar2(75)
-
-);
--- Add comments to the table 
-comment on table O_GXOIETWP
-  is 'O_GXOIETWP';
--- Add comments to the columns 
-comment on column O_GXOIETWP.GFJ3A is 'IFCT Company Number';
-comment on column O_GXOIETWP.GFJMA is 'IFCT Branch Code';
-comment on column O_GXOIETWP.GFO5A is 'IFCT Export AFC Number'; 
-comment on column O_GXOIETWP.GFZRMA is 'IFCT Client No'; 
-comment on column O_GXOIETWP.GFZRNA is 'IFCT Business Type'; 
-comment on column O_GXOIETWP.GFX2AA is 'IFCT Currency Code'; 
-comment on column O_GXOIETWP.GFX0YA is 'IFCT Import AFC Number'; 
-comment on column O_GXOIETWP.GFZROA is 'IFCT Debtor Number '; 
-comment on column O_GXOIETWP.GFZRPA is 'IFCT Debtor Currency Code'; 
-comment on column O_GXOIETWP.GFX12A is 'IFCT Item Number'; 
-comment on column O_GXOIETWP.GFX0CA is 'IFCT Document Number'; 
-comment on column O_GXOIETWP.GFWS3A is 'IFCT Document Type'; 
-comment on column O_GXOIETWP.GFPQA is 'IFCT Amount'; 
-comment on column O_GXOIETWP.GFPRA is 'IFCT Client Currency Equivalent'; 
-comment on column O_GXOIETWP.GFPSA is 'IFCT Balance'; 
-comment on column O_GXOIETWP.GFPTA is 'IFCT Exchange Rate'; 
-comment on column O_GXOIETWP.GFX13A is 'IFCT Document Date'; 
-comment on column O_GXOIETWP.GFX0NA is 'IFCT Due Date'; 
-comment on column O_GXOIETWP.GFPUA is 'IFCT Funding Disapproval Code'; 
-comment on column O_GXOIETWP.GFPVA is 'IFCT Funding Disapproval Amount'; 
-comment on column O_GXOIETWP.GFPWA is 'IFCT Credit Disapproval Code'; 
-comment on column O_GXOIETWP.GFPXA is 'IFCT Credit Disapproval Amount';     
-comment on column O_GXOIETWP.GFX15A is 'IFCT Document Reference';
-
------------------------------------------------------------------------------------
-
---O_GXOIETWP_H_H
-create table O_GXOIETWP_H (
-       etl_date   date,
-       GFJ3A      number(2),
-       GFJMA      varchar2(9),    
-       GFO5A      number(3),
-       GFZRMA     number(5),
-       GFZRNA     varchar2(3),    
-       GFX2AA     number(2),
-       GFX0YA     number(3),
-       GFZROA     number(7),
-       GFZRPA     varchar2(9),    
-       GFX12A     number(5),
-       GFX0CA     varchar2(21),   
-       GFWS3A     number(2),
-       GFPQA      number(13),
-       GFPRA      number(13),
-       GFPSA      number(13),
-       GFPTA      number(13),
-       GFX13A     number(7),
-       GFX0NA     number(7),
-       GFPUA      number(2),
-       GFPVA      number(13),
-       GFPWA      number(2),
-       GFPXA      number(13),
-       GFX15A     varchar2(75)
-
-);
--- Add comments to the table 
-comment on table O_GXOIETWP_H
-  is 'O_GXOIETWP_H';
--- Add comments to the columns 
-comment on column O_GXOIETWP_H.GFJ3A is 'IFCT Company Number';
-comment on column O_GXOIETWP_H.GFJMA is 'IFCT Branch Code';
-comment on column O_GXOIETWP_H.GFO5A is 'IFCT Export AFC Number'; 
-comment on column O_GXOIETWP_H.GFZRMA is 'IFCT Client No'; 
-comment on column O_GXOIETWP_H.GFZRNA is 'IFCT Business Type'; 
-comment on column O_GXOIETWP_H.GFX2AA is 'IFCT Currency Code'; 
-comment on column O_GXOIETWP_H.GFX0YA is 'IFCT Import AFC Number'; 
-comment on column O_GXOIETWP_H.GFZROA is 'IFCT Debtor Number '; 
-comment on column O_GXOIETWP_H.GFZRPA is 'IFCT Debtor Currency Code'; 
-comment on column O_GXOIETWP_H.GFX12A is 'IFCT Item Number'; 
-comment on column O_GXOIETWP_H.GFX0CA is 'IFCT Document Number'; 
-comment on column O_GXOIETWP_H.GFWS3A is 'IFCT Document Type'; 
-comment on column O_GXOIETWP_H.GFPQA is 'IFCT Amount'; 
-comment on column O_GXOIETWP_H.GFPRA is 'IFCT Client Currency Equivalent'; 
-comment on column O_GXOIETWP_H.GFPSA is 'IFCT Balance'; 
-comment on column O_GXOIETWP_H.GFPTA is 'IFCT Exchange Rate'; 
-comment on column O_GXOIETWP_H.GFX13A is 'IFCT Document Date'; 
-comment on column O_GXOIETWP_H.GFX0NA is 'IFCT Due Date'; 
-comment on column O_GXOIETWP_H.GFPUA is 'IFCT Funding Disapproval Code'; 
-comment on column O_GXOIETWP_H.GFPVA is 'IFCT Funding Disapproval Amount'; 
-comment on column O_GXOIETWP_H.GFPWA is 'IFCT Credit Disapproval Code'; 
-comment on column O_GXOIETWP_H.GFPXA is 'IFCT Credit Disapproval Amount';     
-comment on column O_GXOIETWP_H.GFX15A is 'IFCT Document Reference';
-
-----------------------------------------------------------------------------
-
---E_GXOIETWP
-create table E_GXOIETWP (
-       etl_date   varchar2(6),
-       GFJ3A      number(2),
-       GFJMA      varchar2(9),    
-       GFO5A      number(3),
-       GFZRMA     number(5),
-       GFZRNA     varchar2(3),    
-       GFX2AA     number(2),
-       GFX0YA     number(3),
-       GFZROA     number(7),
-       GFZRPA     varchar2(9),    
-       GFX12A     number(5),
-       GFX0CA     varchar2(21),   
-       GFWS3A     number(2),
-       GFPQA      number(13),
-       GFPRA      number(13),
-       GFPSA      number(13),
-       GFPTA      number(13),
-       GFX13A     number(7),
-       GFX0NA     number(7),
-       GFPUA      number(2),
-       GFPVA      number(13),
-       GFPWA      number(2),
-       GFPXA      number(13),
-       GFX15A     varchar2(75)
-
-);
--- Add comments to the table 
-comment on table E_GXOIETWP
-  is 'E_GXOIETWP';
--- Add comments to the columns 
-comment on column E_GXOIETWP.GFJ3A is 'IFCT Company Number';
-comment on column E_GXOIETWP.GFJMA is 'IFCT Branch Code';
-comment on column E_GXOIETWP.GFO5A is 'IFCT Export AFC Number'; 
-comment on column E_GXOIETWP.GFZRMA is 'IFCT Client No'; 
-comment on column E_GXOIETWP.GFZRNA is 'IFCT Business Type'; 
-comment on column E_GXOIETWP.GFX2AA is 'IFCT Currency Code'; 
-comment on column E_GXOIETWP.GFX0YA is 'IFCT Import AFC Number'; 
-comment on column E_GXOIETWP.GFZROA is 'IFCT Debtor Number '; 
-comment on column E_GXOIETWP.GFZRPA is 'IFCT Debtor Currency Code'; 
-comment on column E_GXOIETWP.GFX12A is 'IFCT Item Number'; 
-comment on column E_GXOIETWP.GFX0CA is 'IFCT Document Number'; 
-comment on column E_GXOIETWP.GFWS3A is 'IFCT Document Type'; 
-comment on column E_GXOIETWP.GFPQA is 'IFCT Amount'; 
-comment on column E_GXOIETWP.GFPRA is 'IFCT Client Currency Equivalent'; 
-comment on column E_GXOIETWP.GFPSA is 'IFCT Balance'; 
-comment on column E_GXOIETWP.GFPTA is 'IFCT Exchange Rate'; 
-comment on column E_GXOIETWP.GFX13A is 'IFCT Document Date'; 
-comment on column E_GXOIETWP.GFX0NA is 'IFCT Due Date'; 
-comment on column E_GXOIETWP.GFPUA is 'IFCT Funding Disapproval Code'; 
-comment on column E_GXOIETWP.GFPVA is 'IFCT Funding Disapproval Amount'; 
-comment on column E_GXOIETWP.GFPWA is 'IFCT Credit Disapproval Code'; 
-comment on column E_GXOIETWP.GFPXA is 'IFCT Credit Disapproval Amount';     
-comment on column E_GXOIETWP.GFX15A is 'IFCT Document Reference';
+RINM  报告机构名称,
+RICD  报告机构编码,
+RPDT  报告生成日期,
+CSNM  客户号,
+CTNM  客户名称/姓名,
+CITP  客户身份证件/证明文件类型,
+CTID  客户身份证件/证明文件号码,
+CTNT  客户国籍,
+CTVC  客户职业（对私）或客户行业（对公）,
+CCTL  联系电话,
+CTAR  客户住址/经营地址,
+CCEI  客户其他联系方式,
+HTDT	大额交易发生日期,
+CRCD	大额交易特征代码,
+FINN	金融机构网点名称,
+FIRC	金融机构网点所在地区行政区划代码,
+RLTP	金融机构网点与大额交易的关系,
+FICT	金融机构网点代码类型(默认00),
+FINC	金融机构网点代码,
+CATP	客户账户类型,
+CTAC	客户账号,
+OATM	客户账户开户时间,
+TBNM	交易代办人姓名,
+TBIT	交易代办人身份证件/证明文件类型,
+TBID	代办人身份证件/证明文件号码,
+TBNT	代办人国籍,
+TSTM	交易日期,
+TICD	业务标示号,
+TSTP	交易方式,
+TSCT	涉外收支交易分类与代码,
+TSDR	资金收付标志,
+TDRC	交易方向,
+TRCD	交易发生地,
+TRCDSUFFIX	交易发生地,
+CRPP	资金用途,
+CRTP	币种,
+CRAT	交易金额,
+CFIN	对方金融机构网点名称,
+CFCT	对方金融机构代码网点类型,
+CFIC	对方金融机构网点代码,
+TCNM	交易对手姓名/名称,
+TCIT	交易对手身份证件/证明文件类型,
+TCID	交易对手身份证件/证明文件号码,
+TCAT	交易对手账户类型,
+TCAC	交易对手账号,
