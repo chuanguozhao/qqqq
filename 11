@@ -1,45 +1,14 @@
-RINM  报告机构名称,
-RICD  报告机构编码,
-RPDT  报告生成日期,
-CSNM  客户号,
-CTNM  客户名称/姓名,
-CITP  客户身份证件/证明文件类型,
-CTID  客户身份证件/证明文件号码,
-CTNT  客户国籍,
-CTVC  客户职业（对私）或客户行业（对公）,
-CCTL  联系电话,
-CTAR  客户住址/经营地址,
-CCEI  客户其他联系方式,
-HTDT	大额交易发生日期,
-CRCD	大额交易特征代码,
-FINN	金融机构网点名称,
-FIRC	金融机构网点所在地区行政区划代码,
-RLTP	金融机构网点与大额交易的关系,
-FICT	金融机构网点代码类型(默认00),
-FINC	金融机构网点代码,
-CATP	客户账户类型,
-CTAC	客户账号,
-OATM	客户账户开户时间,
-TBNM	交易代办人姓名,
-TBIT	交易代办人身份证件/证明文件类型,
-TBID	代办人身份证件/证明文件号码,
-TBNT	代办人国籍,
-TSTM	交易日期,
-TICD	业务标示号,
-TSTP	交易方式,
-TSCT	涉外收支交易分类与代码,
-TSDR	资金收付标志,
-TDRC	交易方向,
-TRCD	交易发生地,
-TRCDSUFFIX	交易发生地,
-CRPP	资金用途,
-CRTP	币种,
-CRAT	交易金额,
-CFIN	对方金融机构网点名称,
-CFCT	对方金融机构代码网点类型,
-CFIC	对方金融机构网点代码,
-TCNM	交易对手姓名/名称,
-TCIT	交易对手身份证件/证明文件类型,
-TCID	交易对手身份证件/证明文件号码,
-TCAT	交易对手账户类型,
-TCAC	交易对手账号,
+AM@TNFJP
+EPPDCPP
+IPPDCPP
+LP@STDP
+RB@IBJP
+RB@IPFP
+RB@OBJP
+RB@OPJP
+SSGHCLP
+SSSTDPP
+AM@REGFP
+SSWSCPP
+SSCLACP
+SSGHCGP
