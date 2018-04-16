@@ -1,47 +1,58 @@
-E_YGB               
-E_GWXXB             
-E_PROJECT_LOAN      
-E_Syndicated Loan   
-E_Receivable Finance
-E_MPESPTP           
-E_MPESPHP           
-E_MPEFWDP           
-E_MPEFWHP           
-E_TTCPIPP           
-E_CICPIPP           
-E_TTCYIFP           
-E_MPFFUTP           
-E_MPFFUHP           
-E_MPMSWPP           
-E_MPMSWHP           
-E_MPSWSCP           
-E_MPSWSHP           
-E_MPMNMCP           
-E_MPMNMHP           
-E_ISNMPCP           
-E_ISNMPCPH          
-E_MPMZCPP           
-E_MPMZCHP           
-E_MPMMCPP           
-E_MPMMCHP           
-E_SEDLSIP           
-E_SEDSIHP           
-E_MPMCALP           
-E_MPMCAHP           
-E_APOLLO            
-E_SUMMIT            
-E_DTP               
-E_MMNMBTP           
-E_MMNMLNP           
-E_ISNMMSP           
-E_TTCPIPP_PC        
-E_WIND_PC           
-E_ZCFZB             
-E_FUND_PROD_INFO    
-E_BILL_BNFO_INVOICE 
-E_CRED_CARD_INFO    
-E_CRED_ACCT_TRAD    
-E_CRED_TRAD_DETAIL  
-E_INTER_ITEMS       
-E_SHAREHOLDER_INFO  
-E_FINA_PROD_STATUS  
+3号令表	3号令字段	3号令注释	2号令表	2号令表	2号令字段	2号令注释
+AML_BHBS_DS	CSNM	客户号	大额客户信息表	AML1002	CSNM	客户号
+AML_BHBS_DS	CTNM	客户名称/姓名	大额客户信息表	AML1002	CTNM	客户名称
+AML_BHBS_DS	CITP	客户身份证件/证明文件类型	大额客户信息表	AML1002	CITP	客户身份证件类型
+AML_BHBS_DS	CTID	客户身份证件/证明文件号码	大额客户信息表	AML1002	CTID	客户证件号码
+AML_BHBS_DS	AOITP	客户其他身份证件/证明文件类型				
+AML_BHBS_DS	CTNT	客户国籍	大额客户信息表	AML1002	CTNT	客户国籍
+AML_BHBS_DS	CTVC	客户职业（对私）或客户行业（对公）				
+AML_BHBS_DS	CCTL	联系电话				
+AML_BHBS_DS	CTAR	客户住址/经营地址				
+AML_BHBS_DS	CCEI	客户其他联系方式				
+AML_BHBS_DS	CBCT	客户银行卡类型				
+AML_BHBS_DS	OCBT	客户银行卡其他类型				
+AML_BHBS_DS	CBCN	客户银行卡号码				
+AML_BHBS_DS	HTDT	大额交易发生日期	大额交易表	AML2001	HTDT	大额交易发生日期
+AML_BHBS_DS	CRCD	大额交易特征代码	大额交易表	AML2001	CRCD	大额交易特征代码
+AML_BHBS_DS	FINN	金融机构网点名称	大额客户信息表	AML1002	FINN	网点名称
+AML_BHBS_DS	FIRC	金融机构网点所在地区行政区划代码	大额客户信息表	AML1002	FIRC	网点行政区划代码
+AML_BHBS_DS	RLTP	金融机构网点与大额交易的关系				
+AML_BHBS_DS	FICT	金融机构网点代码类型(默认00)				
+AML_BHBS_DS	FINC	金融机构网点代码	大额客户信息表	AML1002	FINC	网点代码
+AML_BHBS_DS	RLFC	金融机构与客户的关系				
+AML_BHBS_DS	CATP	客户账户类型	大额账号表	AML1010	CATP	账户类型
+AML_BHBS_DS	CTAC	客户账号	大额账号表	AML1010	CTAC	账号
+AML_BHBS_DS	OATM	客户账户开户时间				
+AML_BHBS_DS	TBNM	交易代办人姓名	大额交易表	AML2001	TBNM	交易代办人
+AML_BHBS_DS	TBIT	交易代办人身份证件/证明文件类型	大额交易表	AML2001	TBIT	代办人身份证件类型
+AML_BHBS_DS	TBID	代办人身份证件/证明文件号码	大额交易表	AML2001	TBID	交易代办人身份证件号码
+AML_BHBS_DS	BOITP	交易代办人其他身份证件/证明文件类型				
+AML_BHBS_DS	TBNT	代办人国籍	大额交易表	AML2001	TBNT	代办人国籍
+AML_BHBS_DS	TSTM	交易日期	大额交易表	AML2001	TSTM	交易时间
+AML_BHBS_DS	TICD	业务标示号	大额交易表	AML2001	TICD	业务标识号
+AML_BHBS_DS	RPMT	收付款方匹配号类型				
+AML_BHBS_DS	RPMN	收付款方匹配号				
+AML_BHBS_DS	TSTP	交易方式	大额交易表	AML2001	TSTP	交易方式
+AML_BHBS_DS	OCTT	非柜台交易方式				
+AML_BHBS_DS	OOCT	其他非柜台交易方式				
+AML_BHBS_DS	OCEC	非柜台交易方式的设备代码				
+AML_BHBS_DS	BPTC	银行与支付机构之间的业务交易编码				
+AML_BHBS_DS	TSCT	涉外收支交易分类与代码	大额交易表	AML2001	TSCT	涉外收支交易分类与代码
+AML_BHBS_DS	TSDR	资金收付标志	大额交易表	AML2001	TSDR	资金收付标识
+AML_BHBS_DS	TDRC	交易方向	大额交易表	AML2001	TDRC	交易去向
+AML_BHBS_DS	TRCD	交易发生地	大额交易表	AML2001	TRCD	交易发生地
+AML_BHBS_DS	CRPP	资金用途	大额交易表	AML2001	CRPP	资金用途
+AML_BHBS_DS	CRTP	币种	大额交易表	AML2001	CRTP	币种
+AML_BHBS_DS	CRAT	交易金额	大额交易表	AML2001	CRAT	交易金额
+AML_BHBS_DS	TRA_AMOUNT_CNY	交易金额转人民币				
+AML_BHBS_DS	TRA_AMOUNT_USD	交易金额转美元				
+AML_BHBS_DS	CFIN	对方金融机构网点名称	大额交易表	AML2001	CFIN	对方金融机构网点名称
+AML_BHBS_DS	CFCT	对方金融机构代码网点类型	大额交易表	AML2001	CFCT	对方金融机构代码网点类型
+AML_BHBS_DS	CFIC	对方金融机构网点代码	大额交易表	AML2001	CFIC	对方金融机构网点代码
+AML_BHBS_DS	CFRC	对方金融机构网点行政区划代码				
+AML_BHBS_DS	TCNM	交易对手姓名/名称	大额交易表	AML2001	TCNM	交易对手姓名
+AML_BHBS_DS	TCIT	交易对手身份证件/证明文件类型	大额交易表	AML2001	TCIT	交易对手身份证件/证明文件类型
+AML_BHBS_DS	TCID	交易对手身份证件/证明文件号码	大额交易表	AML2001	TCID	交易对手身份证件/证明文件号码
+AML_BHBS_DS	COITP	其他身份证件/证明文件类型				
+AML_BHBS_DS	TCAT	交易对手账户类型	大额交易表	AML2001	TCAT	交易对手账户类型
+AML_BHBS_DS	TCAC	交易对手账号	大额交易表	AML2001	TCAC	交易对手账号
