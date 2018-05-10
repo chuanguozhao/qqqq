@@ -1,0 +1,290 @@
+
+                  Field name    length      Description
+
+     A            EPGLIE         2A                                                  080923
+     A                                      TEXT('GL OR IE Indicator')               080923
+     A                                      COLHDG('GL' 'IE')                        080923
+     A*                                                                              080923
+     A            EPCTCD         2A                                                  080923
+     A                                      TEXT('Country Code')                     080923
+     A                                      COLHDG('CTY')                            080923
+     A*                                                                              080923
+     A            EPGMAB         4A                                                  080923
+     A                                      TEXT('Group Member Abbreviation')        080923
+     A                                      COLHDG('GP' 'MBR' 'ABBR')                080923
+     A*                                                                              080923
+     A            EPACB          3P 0                                                080923
+     A                                      TEXT('Account Branch')                   080923
+     A                                      COLHDG('A/C' 'BR' 'NO')                  080923
+     A*                                                                              080923
+     A            EPACS          6P 0                                                080923
+     A                                      TEXT('Account Number Serial')            080923
+     A                                      COLHDG('A/C' 'FULL' 'SER')               080923
+     A*                                                                              080923
+     A            EPACX          3P 0                                                080923
+     A                                      TEXT('Account Suffix')                   080923
+     A                                      COLHDG('SUFFIX')                         080923
+     A*                                                                              080923
+88911A*88910      EPTRNO        16A                                                  081027
+88911A*88910                                TEXT('Transaction Reference No')         081027
+88911A*88910                                COLHDG('TRN')                            081027
+88911A            EPXRNO        18A                                                  081027
+88911A                                      TEXT('Transaction Reference No#')        081027
+88911A                                      COLHDG('TRANSACTION' 'REFERENCE' 'N+     081027
+88911A                                      O')                                      081027
+     A*                                                                              080923
+     A            EPAPTY         3A                                                  080923
+     A                                      TEXT('Account/Product Type')             080923
+     A                                      COLHDG('A/C' '/PROD' 'TYP')              080923
+     A*                                                                              080923
+     A            EPGHCL         3A                                                  080923
+     A                                      TEXT('GHO Customer Classification')      080923
+     A                                      COLHDG('GHO' 'CUST' 'CLASIF')            080923
+     A*                                                                              080923
+     A            EPCYCD         3A                                                  080923
+     A                                      TEXT('Currency')                         080923
+     A                                      COLHDG('CCY' 'CD')                       080923
+     A*                                                                              080923
+30712A***         EPRTRA        13P 0                                                130308
+30712A            EPRTRA        15P 0                                                130308
+     A                                      TEXT('Transaction Amount')               080923
+     A                                      COLHDG('TRANSACTION' 'AMOUNT')           080923
+     A*                                                                              080923
+30712A***         EPLTRA        13P 0                                                130308
+30712A            EPLTRA        15P 0                                                130308
+     A                                      TEXT('Lcy Transaction Amount')           080923
+	 A                                      COLHDG('LCY' 'TRANSACTION' 'AMOUNT -     080923
+     A                                      ')                                       080923
+     A*                                                                              080923
+     A            EPVLDT         8P 0                                                080923
+     A                                      TEXT('Value Date')                       080923
+     A                                      COLHDG('VAL' 'DT')                       080923
+     A*                                                                              080923
+     A            EPTEXR        11P 7                                                080923
+     A                                      TEXT('Billing Exchange Rate')            080923
+     A                                      COLHDG('BILLING' 'EXCHG RATE')           080923
+     A*                                                                              080923
+     A            EPDS30        30A                                                  080923
+     A                                      TEXT('Description of length 30')         080923
+     A                                      COLHDG('30 CHAR' 'DESCRIPTION')          080923
+     A*                                                                              080923
+     A            EPRIDS        50A                                                  080923
+     A                                      TEXT('Reference I&E Item Descripti-      080923
+     A                                      on')                                     080923
+     A                                      COLHDG('DESCRIPTION')                    080923
+     A*                                                                              080923
+     A            EPDS50        50A                                                  080923
+     A                                      TEXT('Description of 50 Characters-      080923
+     A                                       Long')                                  080923
+     A                                      COLHDG('DESCRIPTION')                    080923
+	 A*                                                                              080923
+     A            EPNAR1        24O                                                  080923
+     A                                      TEXT('Narrative 1')                      080923
+     A                                      COLHDG('NARRATIVE 1')                    080923
+     A*                                                                              080923
+     A            EPNAR2        24O                                                  080923
+     A                                      TEXT('Narrative 2')                      080923
+     A                                      COLHDG('NARRATIVE 2')                    080923
+     A*                                                                              080923
+     A            EPNAR3        24O                                                  080923
+     A                                      TEXT('Narrative 3')                      080923
+     A                                      COLHDG('NARRATIVE 3')                    080923
+     A*                                                                              080923
+     A            EPNAR4        24O                                                  080923
+     A                                      TEXT('Narrative 4')                      080923
+     A                                      COLHDG('NARRATIVE 4')                    080923
+     A*                                                                              080923
+     A            EPDLNO         5P 0                                                080923
+     A                                      TEXT('Deal Number')                      080923
+     A                                      COLHDG('DEAL NO')                        080923
+     A*                                                                              080923
+     A            EPSQNO         5P 0                                                080923
+     A                                      TEXT('Sequence No')                      080923
+     A                                      COLHDG('SEQ' 'NO')                       080923
+	 A*                                                                              080923
+     A            EPCPWS         4A                                                  080923
+     A                                      TEXT('Capture Terminal ID')              080923
+     A                                      COLHDG('CPT' 'TERM ID')                  080923
+     A*                                                                              080923
+     A            EPCPUS         4A                                                  080923
+     A                                      TEXT('Capture User ID')                  080923
+     A                                      COLHDG('CAPTURE' 'USER')                 080923
+     A*                                                                              080923
+     A            EPCPDT         8P 0                                                080923
+     A                                      TEXT('Capture Date')                     080923
+     A                                      COLHDG('Capture Date' )                  080923
+     A*                                                                              080923
+     A            EPCPTM         6P 0                                                080923
+     A                                      TEXT('Capture Time')                     080923
+     A                                      COLHDG('CPT' 'TIME')                     080923
+     A*                                                                              080923
+     A            EPDLCD         3A                                                  080923
+     A                                      TEXT('Deal Code')                        080923
+     A                                      COLHDG('DEAL' 'CD')                      080923
+     A*                                                                              080923
+     A            EPTRCD         5P 0                                                080923
+     A                                      TEXT('Transaction Code')                 080923
+     A                                      COLHDG('XACT' 'CODE')                    080923
+	 A*                                                                              080923
+     A            EPTRNC         3A                                                  080923
+     A                                      TEXT('Transaction Code')                 080923
+     A                                      COLHDG('XACT' 'CODE')                    080923
+     A*                                                                              080923
+     A            EPSSCD         2A                                                  080923
+     A                                      TEXT('System Code')                      080923
+     A                                      COLHDG('SYS')                            080923
+     A*                                                                              080923
+     A            EPACCG         2A                                                  080923
+     A                                      TEXT('GL A/C Country Code')              080923
+     A                                      COLHDG('GL A/C' 'CTY')                   080923
+     A*                                                                              080923
+     A            EPACGG         4A                                                  080923
+     A                                      TEXT('GL A/C Group Member')              080923
+     A                                      COLHDG('GL A/C' 'GRP MBR')               080923
+     A*                                                                              080923
+     A            EPGLAB         3P 0                                                080923
+     A                                      TEXT('GL Account Branch')                080923
+     A                                      COLHDG('GL A/C' 'BRANCH')                080923
+     A*                                                                              080923
+     A            EPGLAS         6P 0                                                080923
+     A                                      TEXT('GL Account Serial')                080923
+     A                                      COLHDG('GL A/C' 'SERIAL')                080923
+	 A*                                                                              080923
+     A            EPGLAX         3P 0                                                080923
+     A                                      TEXT('GL Account Suffix')                080923
+     A                                      COLHDG('GL A/C' 'SUFFIX')                080923
+     A*                                                                              080923
+     A            EPENTY         6A                                                  080923
+     A                                      TEXT('Entry Type')                       080923
+     A                                      COLHDG('ENTRY' 'TYPE')                   080923
+     A*                                                                              080923
+     A            EPMTCD         1A                                                  080923
+     A                                      TEXT('Maturity (remaining maturity-      080923
+     A                                      )')                                      080923
+     A                                      COLHDG('MATR' 'CD')                      080923
+     A*                                                                              080923
+     A            EPPDIR         1A                                                  080923
+     A                                      TEXT('Pastdue/Irregular status')         080923
+     A                                      COLHDG('PDUE/' 'IRR')                    080923
+     A*                                                                              080923
+     A            EPIMID        10A                                                  080923
+     A                                      TEXT('Input Medium ID')                  080923
+     A                                      COLHDG('INPUT' 'MEDIUM ID')              080923
+     A*                                                                              080923
+     A            EPOBDM         1A                                                  080923
+     A                                      TEXT('Online/Batch Dump Indicator')      080923
+	 A                                      COLHDG('ONLINE/BATCH' 'DUMP' 'IND')      080923
+     A*                                                                              080923
+     A            EPLUPD         8S 0                                                080923
+     A                                      TEXT('Last Update Date')                 080923
+     A                                      COLHDG('LAST' 'UPDATE' 'DATE')           080923
+     A*                                                                              080923
+     A            EPLUPT         6S 0                                                080923
+     A                                      TEXT('Last Update Time')                 080923
+     A                                      COLHDG('LAST' 'UPDATE' 'TIME')           080923
+88951A*                                                                              081222
+88951A            EPIMTY         1A                                                  081222
+88951A                                      TEXT('Input Medium Type')                081222
+88951A                                      COLHDG('INPUT' 'MED' 'TYP')              081222
+88951A*                                                                              081222
+94811A            EPCNFM         1A                                                  090427
+94811A                                      TEXT('DC Confirmed by us Code')          090427
+94811A                                      COLHDG('CONFIRMED')                      090427
+94811A*                                                                              090427
+04833A            EPCCBR         3P 0                                                101202
+04833A                                      TEXT('Cost Centre (Branch)')             101202
+04833A                                      COLHDG('COST' 'CENTRE' 'BRN')            101202
+04833A*                                                                              101202
+04833A            EPDEPT         3P 0                                                101202
+04833A                                      TEXT('Cost Centre (Department Code-      101202
+04833A                                      )')                                      101202
+04833A                                      COLHDG('DEPT' 'CD')                      101202
+04833A*                                                                              101202
+04833A            EPSECT         2P 0                                                101202
+04833A                                      TEXT('Cost Centre (Section Code)')       101202
+04833A                                      COLHDG('SECTION' 'CODE')                 101202
+04833A*                                                                              101202
+14267A*04833      EPMFLG         1A                                                  110524
+14267A*04833                                TEXT('Month Flag')                       110524
+14267A*04833                                COLHDG('MONTH' 'FLAG')                   110524
+04833A*                                                                              101202
+04833A            EPDTAO         8P 0                                                101202
+04833A                                      TEXT('Date A/C Opened ***')              101202
+04833A                                      COLHDG('DATE' 'A/C OPEN')                101202
+04833A*                                                                              101202
+04833A            EPINBI         1A                                                  101202
+04833A                                      TEXT('Interest Bearing')                 101202
+04833A                                      COLHDG('INT' 'BEAR')                     101202
+04833A*                                                                              101202
+04833A            EPLCYC         3A                                                  101202
+04833A                                      TEXT('Local Currency')                   101202
+04833A                                      COLHDG('LOC' 'CCY')                      101202
+04833A*                                                                              101202
+94811A            EPSUPT         1A                                                  090427
+94811A                                      TEXT('SUPPRESS FLAG - UP TO')            090427
+94811A                                      COLHDG('SUPPRESS FLAG - UP' -            090427
+94811A                                             'TO' )                            090427
+94811A*                                                                              090427
+14267A            EPTNCD         2A                                                  110524
+14267A                                      TEXT('HIE Transaction Type')             110524
+14267A                                      COLHDG('HIE TRN' 'TYPE')                 110524
+14267A                                                                               110524
+14267A            EPONBC         1A                                                  110524
+14267A                                      TEXT('Online Batch Indicator')           110524
+14267A                                      COLHDG('ONLINE BCH' 'INDICATOR')         110524
+14267A*                                                                              110524
+14267A            EPDSCP         1A                                                  110524
+14267A                                      TEXT('DISCREPANCIES (Y/N)')              110524
+14267A                                      COLHDG('DISCREP.')                       110524
+14267A*                                                                              110524
+14267A            EPACPT         1A                                                  110524
+14267A                                      TEXT('ACCEPT CODE')                      110524
+14267A                                      COLHDG('ACCEPT' 'CODE')                  110524
+14267A*                                                                              110524
+14267A            EPLGCD         1A                                                  110524
+14267A                                      TEXT('LETTER OF GUARANTEE CODE')         110524
+14267A                                      COLHDG('L/G' 'CODE')                     110524
+14267A*                                                                              110524
+14267A            EPBCAT         1A                                                  110524
+14267A                                      TEXT('BILL CATAGORY CODE')               110524
+14267A                                      COLHDG('BILL' 'CATAGORY' 'CODE')         110524
+14267A*                                                                              110524
+14289A            EPDISC         1A                                                  111020
+14289A                                      TEXT('Discountability Indicator (Y-      111020
+14289A                                      /N)')                                    111020
+14289A                                      COLHDG('Discountability' -               111020
+14289A                                             'Indicator (Y/N)' )               111020
+14289A*                                                                              111020
+14289A            EPDBS          1A                                                  111020
+14289A                                      TEXT('DC/BILL/SG INDICATOR')             111020
+14289A                                      COLHDG('DC/' 'BILL/' 'SG')               111020
+14289A*                                                                              111020
+14289A            EPGAT1         3A                                                  111020
+14289A                                      TEXT('GIMIS ATTRIBUTE 1')                111020
+14289A                                      COLHDG('GIMIS' 'ATT 1')                  111020
+14289A*                                                                              111020
+14289A            EPGAT2         3A                                                  111020
+14289A                                      TEXT('GIMIS ATTRIBUTE 2')                111020
+14289A                                      COLHDG('GIMIS' 'ATT 2')                  111020
+14289A*                                                                              111020
+14289A            EPEVCD         8A                                                  111020
+14289A                                      TEXT('Event Code')                       111020
+14289A                                      COLHDG('EVENT' 'CODE')                   111020
+14289A*                                                                              111020
+30712A            EPGTE          1A                                                  130131
+30712A                                      TEXT('HIE GTE INDICATOR')                130131
+30712A                                      COLHDG('HIE GTE' 'INDICATOR')            130208
+30712A*                                                                              130131
+30736A            EPCBBK         4A                                                  130813
+30736A                                      TEXT('CORRESPONDENT BANK ID')            130813
+30736A                                      COLHDG('CORR' 'BK ID')                   130813
+30736A*                                                                              130813
+30736A            EPCBBH         4A                                                  130813
+30736A                                      TEXT('CORRESPONDENT BRANCH ID')          130813
+30736A                                      COLHDG('CORR' 'BR ID')                   130813
+30736A*                                                                              130813
+30736A            EPCBTY         1A                                                  130813
+30736A                                      TEXT('CORRESPONDENT BANK/BRANCH TY-      130813
+30736A                                      PE')                                     130813
+30736A                                      COLHDG('CORRS' 'BK/BR' 'TYPE')           130813
+30736A*                                                                              130813
