@@ -1,0 +1,38 @@
+SELECT 'DROP TABLESPACE '||NAME||
+' INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;'
+FROM V$TABLESPACE WHERE NAME NOT IN
+('SYSTEM','USERS','TEMP','UNDOTBS1');
+
+select 'drop user '||username||' cascade;' from dba_users
+where DEFAULT_TABLESPACE not in ('SYSTEM','USERS');
+
+
+SELECT TABLESPACE_NAME,FILE_NAME,ROUND(BYTES/1024/1024) MB FROM DBA_DATA_FILES;
+
+SELECT NAME FROM V$CONTROLFILE
+UNION ALL
+SELECT MEMBER FROM V$LOGFILE
+UNION ALL
+SELECT NAME FROM V$DATAFILE
+UNION ALL
+SELECT NAME FROM V$TEMPFILE;
+
+conn scott/tiger
+drop table t1 ;
+create table t1 as select * from emp;
+alter table t1 modify(empno not null);
+create index ti on t1(sal);
+
+select index_name from user_indexes;
+select CONSTRAINT_NAME,TABLE_NAME,COLUMN_NAME  from user_cons_columns;
+
+
+SELECT 'copy '||NAME||' d:\bk' FROM V$CONTROLFILE
+UNION ALL
+SELECT 'copy '||MEMBER||' d:\bk' FROM V$LOGFILE
+UNION ALL
+SELECT 'copy '||NAME||' d:\bk' FROM V$DATAFILE
+UNION ALL
+SELECT 'copy '||NAME||' d:\bk' FROM V$TEMPFILE;
+
+
