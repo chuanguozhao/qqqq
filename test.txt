@@ -1,10 +1,11 @@
-C@CUID list in:
-20180111775040
-20180111824324
-20180112693637
-20180112801814
-20180113978623
-20180114358397
-20180114280737
-20180118115708
-20180118427015
+create table BI_TREE_DATA_DIC
+(
+  id         VARCHAR2(32) not null,   --主键
+  codetype   VARCHAR2(20),      --ORGCODE写死
+  haschild   CHAR(1),           --是否有子节点   1-有   0-没有
+  parentcode VARCHAR2(20),      --上级机构号
+  datacode   VARCHAR2(20),      --机构号
+  dataname   VARCHAR2(256),     --机构名称
+  filler1    VARCHAR2(128),
+  filler2    VARCHAR2(128)
+)
