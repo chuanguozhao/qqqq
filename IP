@@ -1,0 +1,14 @@
+JHCTCD          Country Code                                            2      
+JHGMAB          Group Member Abbreviation                               4      
+JHDCPT          DC product type                                         3      
+JHBRAB          Branch Mnemonic                                         3      
+JHDCNO          The serial part of DC number                            6    0 
+JHDTAT          Date of activity                                        8    0
+JHADSC          Activity Type                                          10     
+JHDS60          Activity Description                                   60     
+JHCPDT          Capture Date                                            8    0
+JHCPWS          Capture Terminal ID                                     4     
+JHDLNO          Deal Number                                             5    0
+JHACB           Account Number                                          3    0
+JHACS           Account Number                                          6    0
+JHACX           Account Number ***                                      3    0
