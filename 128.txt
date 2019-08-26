@@ -1,3 +1,75 @@
 https://hsbc.webex.com/hsbc/j.php?MTID=m4de347912fb01d28a4e8cbe4f44c59d1
 https://hsbc.webex.com/hsbc/e.php?MTID=m6b48189ce32c48fc809c4a9a35ac8812
  https://hsbc.webex.com/hsbc/e.php?MTID=mb7aa32e19fda5f86507162039062ecfa
+
+
+3 CRAM source file – Data from HUB -> ARK -> EAST
+TABLE_NAME	Source System
+CHCLMTP	CARM
+GCBASDP	CARM
+GCCREAP	CARM
+
+4 SCSAI source file – Data from User manual upload -> ARK -> EAST
+TABLE_NAME	Source System
+SYFMTAPM	SCS AI
+SYFMTIP	SCS AI
+SYFMTIPS	SCS AI
+SYFMTRP	SCS AI
+
+28 TREATS source file – Data from HUB -> ARK -> EAST
+MPESPTP
+
+MPESPHP
+
+MPEFWDP
+
+MPEFWHP
+
+TTCPIPP
+
+CICPIPP
+
+TTCYIFP
+
+MPFFUTP
+
+MPFFUHP
+
+MPMSWPP
+
+MPMSWHP
+
+MPSWSCP
+
+MPSWSHP
+
+MPMNMCP
+
+MPMNMHP
+
+ISNMPCP
+
+ISNMPCPH
+
+MPMZCPP
+
+MPMZCHP
+
+MPMMCPP
+
+MPMMCHP
+
+SEDLSIP
+
+SEDSIHP
+
+MPMCALP
+
+MPMCAHP
+
+APOLLO
+
+SUMMIT
+
+DTP
+
