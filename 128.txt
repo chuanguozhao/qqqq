@@ -3,73 +3,16 @@ https://hsbc.webex.com/hsbc/e.php?MTID=m6b48189ce32c48fc809c4a9a35ac8812
  https://hsbc.webex.com/hsbc/e.php?MTID=mb7aa32e19fda5f86507162039062ecfa
 
 
-3 CRAM source file – Data from HUB -> ARK -> EAST
-TABLE_NAME	Source System
-CHCLMTP	CARM
-GCBASDP	CARM
-GCCREAP	CARM
+c_black_hit_count			
+(	SEARCH_DATE	VARCHAR2(10),	
+	QUERIES_NUM	NUMBER(20),	
+	HITS_NUM	NUMBER(20),	
+	BATCH_TIME	DATE	);
+comment on table  c_black_hit_count is '黑名单命中交易统计表';			
+comment on column c_black_hit_count.search_date is '黑名单检索时间(年/月)';			
+comment on column c_black_hit_count.QUERIES_NUM is '查询次数';			
+comment on column c_black_hit_count.HITS_NUM is '命中交易数量';			
+comment on column c_black_hit_count.BATCH_TIME is '跑批日期';			
 
-4 SCSAI source file – Data from User manual upload -> ARK -> EAST
-TABLE_NAME	Source System
-SYFMTAPM	SCS AI
-SYFMTIP	SCS AI
-SYFMTIPS	SCS AI
-SYFMTRP	SCS AI
 
-28 TREATS source file – Data from HUB -> ARK -> EAST
-MPESPTP
-
-MPESPHP
-
-MPEFWDP
-
-MPEFWHP
-
-TTCPIPP
-
-CICPIPP
-
-TTCYIFP
-
-MPFFUTP
-
-MPFFUHP
-
-MPMSWPP
-
-MPMSWHP
-
-MPSWSCP
-
-MPSWSHP
-
-MPMNMCP
-
-MPMNMHP
-
-ISNMPCP
-
-ISNMPCPH
-
-MPMZCPP
-
-MPMZCHP
-
-MPMMCPP
-
-MPMMCHP
-
-SEDLSIP
-
-SEDSIHP
-
-MPMCALP
-
-MPMCAHP
-
-APOLLO
-
-SUMMIT
-
-DTP
 
