@@ -1,18 +1,40 @@
-https://hsbc.webex.com/hsbc/j.php?MTID=m4de347912fb01d28a4e8cbe4f44c59d1
-https://hsbc.webex.com/hsbc/e.php?MTID=m6b48189ce32c48fc809c4a9a35ac8812
- https://hsbc.webex.com/hsbc/e.php?MTID=mb7aa32e19fda5f86507162039062ecfa
-
-
-c_black_hit_count			
-(	SEARCH_DATE	VARCHAR2(10),	
-	QUERIES_NUM	NUMBER(20),	
-	HITS_NUM	NUMBER(20),	
-	BATCH_TIME	DATE	);
-comment on table  c_black_hit_count is '黑名单命中交易统计表';			
-comment on column c_black_hit_count.search_date is '黑名单检索时间(年/月)';			
-comment on column c_black_hit_count.QUERIES_NUM is '查询次数';			
-comment on column c_black_hit_count.HITS_NUM is '命中交易数量';			
-comment on column c_black_hit_count.BATCH_TIME is '跑批日期';			
-
-
-
+PI@IPJP
+PI@OPJP
+PIGPSPP
+CHCLMTP
+GCBASDP
+GCCREAP
+SYFMTAPM
+SYFMTIP
+SYFMTIPS
+SYFMTRP
+MPESPTP
+MPESPHP
+MPEFWDP
+MPEFWHP
+TTCPIPP
+CICPIPP
+TTCYIFP
+MPFFUTP
+MPFFUHP
+MPMSWPP
+MPMSWHP
+MPSWSCP
+MPSWSHP
+MPMNMCP
+MPMNMHP
+ISNMPCP
+ISNMPCPH
+MPMZCPP
+MPMZCHP
+MPMMCPP
+MPMMCHP
+SEDLSIP
+SEDSIHP
+MPMCALP
+MPMCAHP
+APOLLO
+SUMMIT
+DTP
+SSCBBHP
+BILL_BNFO_INVOICE_ECDS
